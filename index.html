@@ -1,453 +1,899 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfólio de Projetos de Ciência de Dados</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rafael Silva · Cientista de Dados e IA</title>
+  <meta name="description" content="Portfólio de Rafael Ribeiro da Silva, Cientista de Dados com experiência em IA Generativa, Machine Learning, Power BI e nuvem AWS. Projetos com código no GitHub.">
+  <meta name="author" content="Rafael Ribeiro da Silva">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://rafaelsilva89.github.io/portfolioProjetos/">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Rafael Silva · Cientista de Dados e IA">
+  <!-- Ao publicar novos projetos, atualize as contagens aqui e nos números do hero -->
+  <meta property="og:description" content="IA Generativa, Machine Learning e AWS: 17 projetos com código no GitHub e 11 dashboards Power BI.">
+  <meta property="og:url" content="https://rafaelsilva89.github.io/portfolioProjetos/">
+  <meta property="og:image" content="https://rafaelsilva89.github.io/portfolioProjetos/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rafael Ribeiro da Silva, Cientista de Dados: IA Generativa, Machine Learning e AWS">
+  <meta name="twitter:card" content="summary_large_image">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonte carregada sem bloquear a renderização -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Aplica o tema salvo antes da pintura para evitar "flash" de cor
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Portfólio de Projetos</strong> Ciência de Dados</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
+  <!-- Ícones reutilizáveis -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm-1 1 9 7 9-7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Zm0-9a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </svg>
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Olá, seja muito bem-vindo (a) ao meu portfólio de projetos de Ciência de Dados.</h1>
-										</header>
-										<p>Nessa página, eu demonstro minhas habilidades de resolver problemas de negócio utilizando conceitos e ferramentas da Ciência de Dados, através de projetos com dados públicos.<br />
-										Você vai encontrar também, minhas experiências profissionais, habilidades, ferramentas e conceitos envolvendo a Ciência de Dados.<br />Sinta-se à vontade para entrar em contato através dos links no final da página.</p>
-									</div>
-									<span class="image object">
-										<img src="images/profile_picture.jpg" alt=""/>
-									</span>
-								</section>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#topo" aria-label="Rafael Silva, voltar ao início">
+        <span class="brand-mark" aria-hidden="true">RS</span>
+        <span class="brand-name">Rafael Silva</span>
+      </a>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#projetos">Projetos</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#competencias">Competências</a>
+        <a href="#formacao">Formação</a>
+        <a href="#contato" class="nav-cta">Contato</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+          <svg aria-hidden="true" focusable="false" class="icon icon-sun"><use href="#i-sun"/></svg>
+          <svg aria-hidden="true" focusable="false" class="icon icon-moon"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+          <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-								<!-- Sobre mim -->
-									<section>
-										<header class="major">
-											<h2>Sobre mim</h2>
-										</header>
+  <main id="conteudo">
 
-										<!-- Content -->
-											<h3 id="content">Meu nome é Rafael Silva</h3>
-											<p>Sou formado em Tecnólogo da Produção, atualmente estou estudando Ciência de Dados.</p>
-											<p>Tenho 9 anos de experiência no setor automotivo, com atuação na área de métodos e processos e uma rotina em elaboração de procedimentos (KPIs), planos de melhoria da produtividade baseado nas ferramentas do Lean Manufacturing, Ferramentas da Qualidade e Green Belt.<p/>
-											<p>Estou buscando uma oportunidade de trabalhar profissionalmente como Cientista de Dados para melhorar a tomada de decisão da empresa, através da construção de soluções usando dados.<p/>
-									</section>
+    <!-- Hero -->
+    <section class="hero" id="topo">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="status"><span class="status-dot" aria-hidden="true"></span>Disponível para novas oportunidades</p>
+          <h1>Rafael Ribeiro da Silva</h1>
+          <p class="hero-role">Cientista de Dados · IA Generativa · Machine Learning</p>
+          <p class="hero-lead">
+            Transformo dados em decisões: de modelos preditivos e dashboards a <strong>agentes de IA com LLMs e RAG</strong>,
+            colocando as soluções para rodar na <strong>nuvem AWS</strong>. Liderei a área de IA no DETRAN-SP.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/rafael-ribeirosilva/" target="_blank" rel="noopener">
+              <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-linkedin"/></svg>LinkedIn
+            <span class="sr-only"> (abre em nova aba)</span></a>
+            <a class="btn btn-ghost" href="https://github.com/RafaelSilva89" target="_blank" rel="noopener">
+              <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>GitHub
+            <span class="sr-only"> (abre em nova aba)</span></a>
+          </div>
+          <p class="hero-meta"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-pin"/></svg>São Paulo – SP · remoto, híbrido ou presencial</p>
+        </div>
+        <div class="hero-photo">
+          <img src="images/profile.webp" width="640" height="640" alt="Foto de Rafael Ribeiro da Silva" fetchpriority="high">
+        </div>
+      </div>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Habilidades</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Linguagens de Programação e Banco de Dados</h3>
-												<ul>
-													<li>Python com foco em análise de dados.</li>
-													<li>SQL para extração de dados.</li>
-													<li>Web scraping com Python.</li>
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Estatística e Machine Learning</h3>
-												<ul>
-													<li>Estatística descritiva ( localização, dispersão, assimetria, kurtosis, densidade ).</li>
-													<li>Algoritmos de Regressão, classificação e clusterização.</li>
-													<li>Técnicas de balanceamento dos dados, seleção de atributos e redução de dimensionalidade.</li>
-													<li>Métricas de performance dos algoritmos ( RMSE, MAE, MAPE, Confusion Matrix, Precisão, Recall ).</li>
-													<li>Pacotes de Machine Learning: Sklearn.</li>
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Visualização de Dados</h3>
-												<ul>
-													<li>Matplotlib, Seaborn, Plotly.</li>
-													<li>Power BI.</li>
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Engenharia de Software</h3>
-												<ul>
-													<li>Git, Github, Virtual Environment.</li>
-													<li>Cloud Heroku.</li>
-												</ul>
-											</div>
-										</article>
-									</div>
-								</section>
+      <div class="container">
+        <ul class="stats" aria-label="Resumo">
+          <li><strong>15+</strong><span>anos resolvendo problemas de negócio</span></li>
+          <li><strong>5+</strong><span>anos em Dados e IA</span></li>
+          <li><strong>28</strong><span>projetos e dashboards publicados</span></li>
+          <li><strong>2</strong><span>pós-graduações em IA (FIAP)</span></li>
+        </ul>
+      </div>
+    </section>
 
-								<!-- Experiência -->
-									<section>
-										<header class="major">
-											<h2>Experiências Profissionais</h2>
-										</header>
+    <!-- Projetos -->
+    <section class="section" id="projetos" aria-labelledby="projetos-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Portfólio</p>
+          <h2 id="projetos-titulo">Projetos</h2>
+          <p class="section-sub">Cada projeto parte de um problema de negócio. Abra "Ver estudo de caso" para o resumo ou vá direto ao código no GitHub.</p>
+        </header>
 
-											<h2 id="content">Projetos completos de Ciência de Dados</h2>
-											<p>Ofereço um histórico comprovado na construção de soluções utilizando dados públicos, próximos dos desafios reais das empresas. Abordei cada problema desde a concepção inicial até a publicação do algoritmo treinado em produção. Minha abordagem envolve a compreensão do contexto do negócio, identificação de desafios específicos e utilização de ferramentas de Ciência de Dados para garantir a escalabilidade e eficiência da solução.</p>
+        <div class="filters" role="group" aria-label="Filtrar projetos por tema">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">28</span></button>
+          <button type="button" class="filter" data-filter="aws" aria-pressed="false">Nuvem AWS <span class="count">6</span></button>
+          <button type="button" class="filter" data-filter="ds" aria-pressed="false">Ciência de Dados <span class="count">11</span></button>
+          <button type="button" class="filter" data-filter="bi" aria-pressed="false">Análise de Dados <span class="count">11</span></button>
+          <button type="button" class="filter" data-filter="ia" aria-pressed="false"><span class="lbl-full">Inteligência Artificial</span><span class="lbl-short" aria-hidden="true">IA</span> <span class="count">em breve</span></button>
+        </div>
+        <p class="sr-only" id="filter-status" role="status"></p>
 
-											<h2 id="content">Técnico de métodos e processos</h2>
-											<p>Eu sou um profissional com 9 anos no setor automotivo, com atuação em métodos e processos, com conhecimento nas ferramentas do Lean Manufacturing, ferramentas da qualidade, 6 sigmas e o sistema SAP, para impulsionar a eficiência operacional. Participei ativamente do desenvolvimento de dispositivos para melhoria de processos produtivos, try-outs e implementação de linhas de produção.</p>
-											<p>Destaco minha habilidade na automatização de procedimentos eletrônicos utilizando a linguagem de programação VBA, proporcionando uma redução significativa no tempo e nos erros associados a tarefas repetitivas.</p>
-											<p>Além disso, possuo expertise na implementação de KPIs (Key Performance Indicators) para monitorar o desempenho e impulsionar a melhoria contínua.</p>
+        <!-- Nuvem AWS -->
+        <div class="group" data-group="aws" data-more="Ver todos os projetos de Nuvem AWS ({n})">
+          <h3 class="group-title"><span class="dot dot-aws" aria-hidden="true"></span>Nuvem AWS</h3>
+          <div class="grid">
 
-								  </section>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Preparatorio_Desafio_2_BIA_Alta_Disponibilidade_e_CICD" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-alb-cicd.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS</span>
+                <h4>Alta Disponibilidade com Load Balancer e CI/CD</h4>
+                <p class="card-summary">Aplicação full-stack em duas zonas de disponibilidade atrás de um ALB, com HTTPS e deploy automático a cada <code>git push</code>.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>ALB</li><li>ECS</li><li>CodePipeline</li><li>ECR</li><li>Route 53</li><li>ACM</li><li>RDS</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Uma única máquina era ponto único de falha, e cada deploy era manual e derrubava o site.</dd>
+                    <dt>Solução</dt><dd>ALB com target group distribuindo tráfego entre tasks ECS em duas AZs; CodePipeline + CodeBuild publicam a imagem no ECR e atualizam o serviço gradualmente.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Deploy sem downtime disparado pelo GitHub</li><li>Domínio próprio com HTTPS (Route 53 + ACM)</li><li>Ambiente de dev criado com o agente de IA Kiro</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Preparatorio_Desafio_2_BIA_Alta_Disponibilidade_e_CICD" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Alta Disponibilidade com Load Balancer e CI/CD (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Projetos - Ciência de Dados</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/previsãoVendas.jpg" alt="" /></a>
-											<h3>Construção de um modelo para previsão de vendas</h3>
-											<p>Eu usei Python, Estatística e técnicas de Machine Learning para fazer um modelo de previsão de vendas. E o resultado desta solução, caso fosse implementada, seria proporcionar para o CFO da empresa Rossmann, condições de consultar a previsão das vendas nas próximas seis semanas de cada uma das lojas farmacêuticas.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook e Pycharm.</li>
-												<li>Average Model,Random Forest Regressor, Linear Regression - Lasso, Prophet e XGBoost Regressor.</li>
-												<li>Flask framework web.</li>
-												<li>Heroku Cloud.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Rossmann_Store_Sales_Prediction" class="button">Saiba Mais</a><a href="#"></a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/classificadoClientes.jpg" alt="" /></a>
-											<h3>Prevendo os preços das casas com Machine Learning</h3>
-											<p>Utilizando técnicas de ciência de dados, é possível analisar variáveis do setor imobiliário e identificar padrões que influenciam os preços de aluguel. Com um modelo preciso de previsão, os stakeholders do mercado imobiliário podem tomar decisões mais informadas, otimizando os preços dos aluguéis e aumentando a eficiência operacional. A entrega final será um notebook contendo todo o processo de modelagem, incluindo a implementação de uma API para uso comercial.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook e Pycharm.</li>
-												<li>Average Model, Random Forest Regressor, Linear Regression Model, Linear Regression Regularized Model - Lasso e XGBoost Regressor.</li>
-												<li>Localhost.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Prevendo_os_precos_das_casas_com_Machine_Learning" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/previsaoFuncionario.PNG" alt="" /></a>
-											<h3>Previsão de rotatividade de funcionários</h3>
-											<p>A utilização de dados e análise de dados pode otimizar a contratação e retenção de funcionários, resultando em maior eficiência operacional. A implementação do modelo preditivo permite identificar funcionários com alto risco de churn e tomar medidas preventivas para reduzir a rotatividade e a empresa se beneficiará com a redução de custos, tempo e esforço envolvidos na contratação e retenção de funcionários, assim como com uma melhoria geral da eficiência operacional.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-												<li>Regressão logística e Random forest.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Previsao_de_rotatividade_de_funcionarios" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/clusterizacaoCliente.PNG" alt="" /></a>
-											<h3>Segmentação de clientes - cartão de crédito</h3>
-											<p>A segmentação de clientes é essencial para estratégias de marketing bem-sucedidas, e este projeto busca implementar essa prática. Ao coletar e analisar dados dos clientes, serão identificados padrões e características comuns. Com base nessa segmentação, serão desenvolvidas campanhas de marketing personalizadas para cada grupo, otimizando a comunicação e aumentando a probabilidade de conversão em vendas.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-												<li>K-Means e PCA (principal component analysis).</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Segmentacao_de_clientes-cartao_de_credito" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/classificacaoRelacoesPublicas.PNG" alt="" /></a>
-											<h3>Análise de sentimento - avaliações de produtos</h3>
-											<p>O estudo visa compreender os reviews dos clientes em redes sociais. Isso permite identificar pontos fortes e problemas, orientando decisões de desenvolvimento e marketing. A coleta de dados de reviews será seguida pela aplicação de técnicas de análise de sentimentos para classificar os textos como positivos ou negativos. Com a implementação do modelo será uma ferramenta que fornece informações sobre a opinião dos clientes, auxiliando a toamda de decisões.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy, Seaborn e WordCloud.</li>
-												<li>Jupyter Notebook.</li>
-												<li>Naive Bayes e Regressão Logística.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Analise_de_sentimento-avaliacoes_de_produtos" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/vendasPB.jpg" alt="" /></a>
-											<h3>Análise do Comportamento da Carteira de Ações - Finanças parte 1</h3>
-											<p>A compreensão do comportamento das ações é essencial para investidores tomarem decisões estratégicas. Utilizando técnicas de ciência de dados, será possível analisar os preços das ações ao longo do tempo e extrair insights valiosos. A solução possibilitará que investidores tomem decisões mais informadas e estratégicas em relação à sua carteira de ações, com base no comportamento observado durante o período de 2015 a 2022.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-												<li>Análise da taxa de retorno simples, logarítmica e retorno de carteira de ações.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Analise_do_Comportamento_da_Carteira_de_Acoes-Financas_parte_1" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/estoquePB.jpg" alt="" /></a>
-											<h3>Cálculo do risco das ações - Finanças parte 2</h3>
-											<p>A análise do comportamento das ações é crucial para avaliar a saúde das empresas e identificar as tendências do mercado financeiro. Compreender o desempenho da carteira de ações permite aos investidores tomar decisões informadas, comparando seu retorno com o desempenho da BOVESPA. Essa solução capacitará os investidores a tomar decisões estratégicas e informadas em relação à sua carteira de ações.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-												<li>Variância, Desvio Padrão, Coeficiente de variação, Covariância e Correlação.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Calculo_do_risco_das_acoes-Financas_parte_2" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/projetoPB.jpg" alt="" /></a>
-											<h3>Sistema de Recomendação - Livros</h3>
-											<p>A implementação de um modelo de recomendação personalizada de livros é importante devido ao crescimento do mercado e à diversificação dos gostos dos leitores. Um modelo desse tipo pode aumentar a satisfação dos usuários, impulsionar as vendas e promover a fidelização dos clientes, fornecendo recomendações alinhadas com suas preferências individuais. O resultado será a criação de um modelo de recomendação personalizada que irá oferecer sugestões de livros relevantes e interessantes para cada usuário.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-												<li>NearestNeighbors.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Sistema_de_Recomendacao-Livros" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/rhPB.jpg" alt="" /></a>
-											<h3>Análise dos resultados da eleição - 2020</h3>
-											<p>A análise de dados eleitorais é essencial para compreender e aprimorar o sistema político. Ao explorar os dados disponíveis, é possível identificar padrões e tendências que oferecem insights valiosos sobre o comportamento dos eleitores, preferências políticas e fatores que influenciam as decisões de voto. O projeto envolve a coleta de dados eleitorais do primeiro turno das eleições municipais e estaduais de 2020, incluindo informações sobre eleitorado, candidatos e resultados.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Analise_dos_resultados_da_eleicao-2020" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src=https://media4.giphy.com/media/RDZo7znAdn2u7sAcWH/giphy.gif alt="" /></a>
-											<h3>Detectando Fraudes em Transferências Bancárias</h3>
-											<p>O projeto proposto visa implementar um modelo preditivo para detecção de fraudes em transações bancárias online. Isso é importante devido ao aumento crescente de golpes e fraudes, como indicado por um aumento de 43% nesse tipo de golpe no Brasil. O objetivo é garantir a segurança das transações e proteger os clientes da Instituição Financeira. Esse modelo poderá ser aplicado em tempo real para avaliar a autenticidade de novas transações, aumentando a eficácia na detecção de fraudes e protegendo os clientes da Instituição Financeira.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-												<li>XGBoost Regressor, Light Gradient Boost Machine ( LGBM ) e Random Forest.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Detectando_Fraudes_em_Transferencias_Bancarias" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/drePB.jpg" alt="" /></a>
-											<h3>Análise de clusters para segmentar os clientes</h3>
-											<p>A implementação desse projeto é importante para que a empresa possa direcionar suas ações de marketing de forma eficiente, segmentando os clientes de acordo com suas características e personalidades. O resultado será um aumento na eficácia das ações de marketing e maior probabilidade de sucesso na comercialização do novo produto.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Pandas, Matplotlib, Numpy e Seaborn.</li>
-												<li>Jupyter Notebook.</li>
-												<li>K-Means e Método de Elbow.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/Analise_de_clusters_para_segmentar_os_clientes" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/img.png" alt="" /></a>
-											<h3>Criação de um assistente virtual</h3>
-											<p>O objetivo deste projeto é criar um assistente virtual baseado no modelo GPT-3.5 da OpenAI, capaz de interagir com os usuários e fornecer respostas relevantes a perguntas e consultas.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Git e Github.</li>
-												<li>Python, Streamli e Openai.</li>
-												<li>Visual Studio Code.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/RafaelSilva89/App_ChatGPT" class="button">Saiba Mais</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Desafio_1_BIA_rodando_na_AWS_com_ECS_e_entrega_do_projeto" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-ecs-rds.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS</span>
+                <h4>Aplicação em Containers no Amazon ECS com RDS</h4>
+                <p class="card-summary">App Node.js + React + PostgreSQL no ECS, com banco em sub-rede privada e o ambiente validado por um agente de IA.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>ECS</li><li>ECR</li><li>RDS PostgreSQL</li><li>VPC</li><li>SSM</li><li>Docker</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Tirar a aplicação do ambiente local e operá-la na nuvem sem expor o banco de dados à internet.</dd>
+                    <dt>Solução</dt><dd>Imagem publicada no ECR e executada num cluster ECS (porta 80 → 8080); RDS privado que só aceita o Security Group da aplicação.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Banco sem acesso público</li><li>Administração via SSM, sem porta SSH aberta</li><li>Diagnóstico do ambiente gerado pelo Kiro-CLI</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Desafio_1_BIA_rodando_na_AWS_com_ECS_e_entrega_do_projeto" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Aplicação em Containers no Amazon ECS com RDS (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-							<!-- Section Power BI -->
-								<section>
-									<header class="major">
-										<h2>Projetos - Power BI</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioVendas.png" alt="" /></a>
-											<h3>Relatório de vendas</h3>
-											<p>Neste cenário fictício, criei um relatório detalhado para analisar as vendas de uma loja. O relatório abrange um período de tempo específico e apresenta dados abrangentes sobre o desempenho de vendas da loja. Ele inclui informações como faturamento total de vendas realizadas, os produtos mais vendidos, as marcas de produtos. Além disso, o relatório também analisa tendências de vendas ao longo do período, identificando picos e quedas nas vendas, bem como padrões sazonais. Com base nessas informações, é possível tomar decisões estratégicas para otimizar as vendas, como ajustar os preços, promover certos produtos ou investir em marketing direcionado.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiMTRlNTI5ZWYtNjYwOC00ZWZlLTgyNTMtYjU1NDkzMzA0NDMyIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media media-contain" href="https://github.com/RafaelSilva89/Desafio_3_BIA_para_rodar_bia-web_com_os_assets_no_S3" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-s3.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS</span>
+                <h4>Front-end no S3, API no ECS e Banco no RDS</h4>
+                <p class="card-summary">Monolito dividido em duas partes: o React vira site estático no S3 e a API Node.js segue no ECS, com deploy por script.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>S3</li><li>ECS</li><li>RDS</li><li>SSM</li><li>Shell Script</li><li>React</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Front-end e back-end acoplados no mesmo container: qualquer mudança visual exigia novo deploy da API.</dd>
+                    <dt>Solução</dt><dd>Build do React sincronizado com um bucket S3 (static hosting); script Shell recebe a URL da API por argumento e publica tudo.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Deploy do front sem passo manual</li><li>Front servido sem servidor</li><li>Migração do banco por túnel seguro (SSM)</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Desafio_3_BIA_para_rodar_bia-web_com_os_assets_no_S3" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Front-end no S3, API no ECS e Banco no RDS (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioProjeto.png" alt="" /></a>
-											<h3>Relatório de projetos</h3>
-											<p>Neste cenário fictício, foi desenvolvido um completo dashboard para visualizar o andamento dos projetos de uma consultoria. Esse relatório oferece uma visão abrangente e detalhada sobre cada projeto em andamento, permitindo uma análise clara e precisa do seu progresso e desempenho. Além disso, é possível visualizar gráficos e indicadores-chave de desempenho, como projetos fechados, total orçado versus total pago e total desconto.Essas informações auxiliam os gestores e equipe de projetos a tomar decisões estratégicas, identificar possíveis gargalos, alocar recursos de forma eficiente e realizar ajustes para garantir o sucesso de cada projeto.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiZDE2ZTNjNzgtNDlhNS00ZTM1LWEwMTktOGEyMjM5NDViNjczIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media media-contain" href="https://github.com/RafaelSilva89/Conectividade_com_seguranca_na_AWS" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-ssm.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS</span>
+                <h4>Acesso Seguro sem Portas Abertas: SSH × SSM</h4>
+                <p class="card-summary">Laboratório que compara SSH/RDP tradicionais com o Session Manager: máquina privada, sem IP público, sem chave e com controle via IAM.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>EC2</li><li>VPC</li><li>Systems Manager</li><li>IAM</li><li>RDS</li><li>AWS CLI</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Administrar servidores costuma exigir a porta 22 aberta para a internet e uma chave privada guardada num notebook.</dd>
+                    <dt>Solução</dt><dd>Montei o modelo tradicional (SSH, RDP, RDS) e depois o seguro: instância em sub-rede privada acessada pelo SSM, com permissão por IAM Role.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Zero portas de entrada abertas</li><li>Acesso auditável por IAM</li><li>Ambientes criados e destruídos por CLI, com controle de custos</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Conectividade_com_seguranca_na_AWS" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Acesso Seguro sem Portas Abertas: SSH × SSM (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioComercial.png" alt="" /></a>
-											<h3>Relatório comercial</h3>
-											<p>Neste cenário fictício, foi elaborado um relatório abrangente para o departamento comercial, a fim de visualizar e analisar o faturamento das vendas. Esse relatório oferece informações detalhadas sobre total de vendas, ticket médio, quantidade de clientes atendidos e o faturamento por marca. Em resumo, o relatório comercial é uma ferramenta valiosa para o departamento comercial, fornecendo informações essenciais para a tomada de decisões estratégicas, o monitoramento do desempenho de vendas e o planejamento de ações para impulsionar o faturamento e o sucesso da empresa.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiNjBkZTFjZjQtNjI3NC00NGY1LWEyMjctYTBiYTA5ZTk2NTU4IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media media-contain" href="https://github.com/RafaelSilva89/Desafio_2_Arquitetura_WSL_Conectado_na_AWS" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-wsl.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS</span>
+                <h4>Estação de Desenvolvimento WSL 2 Conectada à AWS</h4>
+                <p class="card-summary">Linux no Windows autenticado na AWS com credenciais temporárias, EC2 operada pelo Session Manager e imagem Docker publicada no ECR.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>WSL 2</li><li>Docker</li><li>EC2</li><li>ECR</li><li>SSM</li><li>IAM</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Hardware local limitado e acesso à nuvem com credenciais fixas e portas expostas.</dd>
+                    <dt>Solução</dt><dd>Ubuntu 24.04 no WSL 2 com AWS CLI e plugin do SSM; EC2 de desenvolvimento lançada por script e acessada sem a porta 22; build e push da imagem para o ECR.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Credenciais temporárias via IAM</li><li>Guia reproduzível em 13 etapas</li><li>Tudo desligado no final, sem custo residual</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Desafio_2_Arquitetura_WSL_Conectado_na_AWS" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Estação de Desenvolvimento WSL 2 Conectada à AWS (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioLogistico.png" alt="" /></a>
-											<h3>Relatório logístico</h3>
-											<p>No cenário fictício, foi desenvolvido um dashboard logístico abrangente para acompanhar e analisar a quantidade de viagens realizadas. Esse relatório oferece uma visão detalhada e atualizada sobre a logística da empresa, permitindo o monitoramento eficiente das viagens e a identificação de padrões e tendências. O dashboard logístico apresenta informações essenciais, receita, lucro, km rodados e a quantidade de viagens. Além disso, é possível visualizar gráficos e indicadores-chave de desempenho, como a eficiência de entrega. Com essas informações em mãos, os gestores logísticos podem tomar decisões estratégicas para otimizar a eficiência operacional, reduzir custos, melhorar os prazos de entrega e a qualidade do serviço.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiN2NhODIwMDgtYjBmZS00OTVhLThlM2MtOTRlODUxOTNjMmYxIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media media-contain" href="https://github.com/RafaelSilva89/Desafio_1_Arquitetura_Local_e_em_AWS" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-local.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS</span>
+                <h4>Do Local à Nuvem: Docker, WSL 2 e EC2</h4>
+                <p class="card-summary">Da máquina zerada à aplicação rodando com Docker Compose localmente e numa EC2 na AWS, em 22 etapas reproduzíveis.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Docker Compose</li><li>PostgreSQL</li><li>WSL 2</li><li>EC2</li><li>CloudShell</li><li>Budgets</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>O clássico "funciona na minha máquina": ambientes diferentes entre desenvolvimento e nuvem.</dd>
+                    <dt>Solução</dt><dd>App + PostgreSQL em Docker Compose com volume persistente; depois, EC2 provisionada pelo CloudShell com Security Group, IAM Role e SSM.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Persistência de dados comprovada</li><li>Orçamento e alertas de custo configurados</li><li>Validação ao fim de cada etapa</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Desafio_1_Arquitetura_Local_e_em_AWS" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Do Local à Nuvem: Docker, WSL 2 e EC2 (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioRH.png" alt="" /></a>
-											<h3>Relatório de RH</h3>
-											<p>No cenário fictício, foi criado um relatório abrangente para o departamento de Recursos Humanos (RH), com o objetivo de analisar os funcionários da empresa. Esse relatório fornece informações detalhadas sobre os colaboradores, permitindo uma visão clara e completa do quadro de pessoal. O relatório de RH abrange uma variedade de informações, como o número total de funcionários, a distribuição dos colaboradores por cidade e a distribuição por gênero. Os gestores de RH podem utilizar essas informações para tomar decisões estratégicas relacionadas à gestão de talentos, como identificar necessidades de treinamento e desenvolvimento, promover a diversidade e inclusão, realizar ações de retenção de talentos e melhorar os processos de recrutamento e seleção.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiOTExNDM5ZmMtNTZlNi00YzNhLWIzN2YtOTE3OTM5MWNhNTAyIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+          </div>
+        </div>
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioEstoque.png" alt="" /></a>
-											<h3>Relatório de estoque</h3>
-											<p>No cenário fictício, foi desenvolvido um dashboard completo para analisar o comportamento do estoque de uma empresa. Esse relatório oferece uma visão abrangente e detalhada sobre os produtos em estoque, permitindo um monitoramento eficiente do seu fluxo e desempenho. O dashboard de estoque apresenta informações essenciais, como o saldo de estoque, a distribuição por categorias ou tipos e a porcentagem de devoluções, bem como as tendências de consumo e demanda ao longo do tempo. O relatório de estoque é uma ferramenta valiosa para a empresa, fornecendo insights estratégicos sobre a gestão do estoque e permitindo tomadas de decisão embasadas, com o objetivo de melhorar a eficiência operacional, reduzir custos, minimizar riscos e garantir um fluxo contínuo de produtos para atender à demanda dos clientes.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiNjNkZDYwOGMtYmY3Ny00NjAyLTgwNWMtNTIwNzRlYzRlYzU4IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+        <!-- Ciência de Dados -->
+        <div class="group" data-group="ds" data-more="Ver todos os projetos de Ciência de Dados ({n})">
+          <h3 class="group-title"><span class="dot dot-ds" aria-hidden="true"></span>Ciência de Dados</h3>
+          <div class="grid">
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioDRE1.png" alt="" /></a>
-											<h3>Relatório para demonstrativo de resultados</h3>
-											<p>No cenário fictício, foi desenvolvido um DRE (Demonstrativo de Resultados) Gerencial personalizado para oferecer uma visualização resumida e customizada para o gestor do negócio. Esse relatório apresenta uma análise abrangente das receitas, custos e despesas da empresa, fornecendo informações cruciais sobre o desempenho financeiro e a lucratividade do negócio. Esse relatório customizado é projetado para atender às necessidades específicas do gestor, oferecendo uma visão resumida e visualmente atraente do desempenho financeiro da empresa. Por meio de gráficos, tabelas e indicadores-chave, o DRE Gerencial facilita a interpretação e a análise dos resultados. O relatório também pode incluir comparativos com períodos anteriores, permitindo a identificação de tendências e variações significativas. Com base nas informações fornecidas pelo DRE Gerencial, o gestor pode identificar oportunidades de redução de custos, otimização de despesas, aumento da eficiência operacional e desenvolvimento de estratégias para impulsionar a rentabilidade do negócio.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiNjk1ZDk5YzctY2RiZi00Y2U3LWI2ZGUtNzc5YTJlNDAxMTQ0IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Rossmann_Store_Sales_Prediction" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-rossmann.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Previsão de Vendas de uma Rede de Farmácias</h4>
+                <p class="card-summary">Prevê as vendas das próximas 6 semanas de cada loja Rossmann e entrega o resultado por um bot no Telegram.</p>
+                <p class="metric"><strong>~4%</strong> de erro na previsão de 6 semanas (loja 286)</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Random Forest</li><li>Flask</li><li>Heroku</li><li>CRISP-DM</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>O CFO precisava definir quanto investir na reforma de cada loja, mas não havia previsão confiável de faturamento.</dd>
+                    <dt>Solução</dt><dd>Ciclo CRISP-DM completo: engenharia de atributos, Random Forest escolhido entre 6 modelos (média, lineares, Prophet, XGBoost) e API Flask no Heroku consumida pelo bot.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Modelo em produção, consultado pelo Telegram</li><li>Insights de sazonalidade (fim de mês, domingos)</li><li>Cenários de pior e melhor caso por loja</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Rossmann_Store_Sales_Prediction" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Previsão de Vendas de uma Rede de Farmácias (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioProducao.png" alt="" /></a>
-											<h3>Relatório de produção</h3>
-											<p>No cenário fictício, criei um relatório detalhado para analisar o histórico de produção de uma empresa. Esse relatório fornece informações essenciais sobre a quantidade de produtos fabricados ao longo do tempo, permitindo uma visão clara e abrangente do desempenho produtivo da empresa. O relatório de produção apresenta dados como a quantidade de unidades produzidas por período, o tempo médio de produção, as taxas de eficiência. Além disso, é possível visualizar gráficos e indicadores-chave, como a utilização da capacidade produtiva e a qualidade dos produtos fabricados. Ao analisar o histórico de produção, é possível identificar oportunidades de melhoria, tomar decisões estratégicas e otimizar os processos de fabricação, resultando em um aumento da eficiência, qualidade e lucratividade do negócio.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiYmFkM2I0ZDItMWRiMi00N2ZjLWJkZWUtNjNkNjJjNGQ5Njg3IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Detectando_Fraudes_em_Transferencias_Bancarias" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-fraude.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Detecção de Fraudes em Transferências Bancárias</h4>
+                <p class="card-summary">Classificador para 284 mil transferências com apenas 492 fraudes (0,17%), um caso extremo de desbalanceamento.</p>
+                <p class="metric"><strong>95%</strong> de precisão e 79% de recall nas fraudes (Random Forest)</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>Random Forest</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Golpes com dados bancários pela internet cresceram 43% no Brasil (iG, 2020), gerando prejuízo para a instituição e para os clientes.</dd>
+                    <dt>Solução</dt><dd>Comparação de Random Forest, XGBoost e LightGBM com ajuste de hiperparâmetros e de threshold, priorizando precisão e recall.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Random Forest final: precisão 95,06%, recall 78,57%</li><li>F1-score de 81,97% (XGBoost)</li><li>Recomendação de modelo conforme a capacidade do time</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Detectando_Fraudes_em_Transferencias_Bancarias" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Detecção de Fraudes em Transferências Bancárias (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/vendasMetaPB.jpg" alt="" /></a>
-											<h3>Relatório para acompanhar venda VS meta</h3>
-											<p>No SQL foi realizado algumas views (tabela vitual), para fazer algumas tabelas dimensão e conectar no Power Bi para realizar algumas análises comparando o produto (vendas online) com a meta.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiZDIwZjAzNjQtNmQ2Zi00MjU0LTljNjUtMjJmYWNkMzIzMjA1IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Analise_de_sentimento-avaliacoes_de_produtos" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-sentimento.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados · NLP</span>
+                <h4>Análise de Sentimento em Avaliações de Produtos</h4>
+                <p class="card-summary">Modelo de NLP que classifica reviews da Amazon Alexa como positivos ou negativos para o time de relações públicas.</p>
+                <p class="metric"><strong>93%</strong> de F1-score (Naive Bayes)</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>NLP</li><li>Naive Bayes</li><li>Regressão Logística</li><li>WordCloud</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Acompanhar manualmente o que os clientes falam dos produtos em reviews e redes sociais não escala.</dd>
+                    <dt>Solução</dt><dd>Pré-processamento de texto e classificadores supervisionados, priorizando a captura de reviews negativos.</dd>
+                    <dt>Destaques</dt><dd><ul><li>3.150 avaliações analisadas</li><li>Nuvens de palavras por sentimento</li><li>Aplicável a posts em redes sociais</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Analise_de_sentimento-avaliacoes_de_produtos" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Análise de Sentimento em Avaliações de Produtos (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/PB_RelatorioDRE2.png" alt="" /></a>
-											<h3>Relatório para demonstrativo de resultados</h3>
-											<p>Neste dashboard financeiro, foi construido um demonstrativo de resultado do exercício (DRE) e um simulador de cenários que irá permitir aos gestores fazerem uma previsão de cenário futuro com base em um resultado realizado que foi disponibilizado no formato de PDF.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiYjJlN2UzZjMtN2NkMS00ZmIwLTk3NzYtNjQ3OWVhNDc1NmI2IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Previsao_de_rotatividade_de_funcionarios" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-churn.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Previsão de Rotatividade de Funcionários</h4>
+                <p class="card-summary">Aponta quem tem alto risco de deixar a empresa para o RH agir antes. Cada nova contratação custa, em média, US$ 7,6 mil.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Scikit-learn</li><li>Regressão Logística</li><li>Random Forest</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Repor um funcionário leva cerca de 52 dias e custa caro; o RH não sabia quem estava prestes a sair.</dd>
+                    <dt>Solução</dt><dd>Análise de variáveis como horas extras, satisfação e renda, e modelos de classificação para estimar o risco de saída.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Perfis de risco explicáveis para o RH</li><li>Comparação entre modelos lineares e de árvore</li><li>Foco em reduzir custo de reposição</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Previsao_de_rotatividade_de_funcionarios" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Previsão de Rotatividade de Funcionários (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-										<article>
-											<a href="#" class="image"><img src="images/producaoOEE_PB.png" alt="" /></a>
-											<h3>Relatório de Produção com Cálculo de OEE</h3>
-											<p>Neste dashboard de Produção com Cálculo de OEE conectando em base SQL SERVER, foi construido para permitir aos gestores um acompanhamento da produção de sua empresa.</p>
-											<ul class="actions">
-												<li><a href="https://app.powerbi.com/view?r=eyJrIjoiY2Q4NjA4YWMtMTBjOS00NzRjLWIyNGMtODI5OTUzNjMzOTRhIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" class="button">Clique aqui</a><a href="#"></a></li>
-											</ul>
-										</article>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Prevendo_os_precos_das_casas_com_Machine_Learning" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-casas.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Precificação de Aluguéis com Machine Learning</h4>
+                <p class="card-summary">Modelo de regressão que estima o valor do aluguel a partir das características do imóvel e da cidade.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Random Forest</li><li>XGBoost</li><li>Lasso</li><li>Otimização Bayesiana</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Precificar aluguéis "no olho" leva a imóveis parados ou abaixo do valor de mercado.</dd>
+                    <dt>Solução</dt><dd>EDA por cidade, área e condomínio; comparação de 5 regressores e ajuste com otimização bayesiana.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Random Forest como modelo final</li><li>Análise de erro com MAE, RMSE e MAPE</li><li>Próximos passos documentados para evoluir o modelo</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Prevendo_os_precos_das_casas_com_Machine_Learning" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Precificação de Aluguéis com Machine Learning (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-									</div>
-								</section>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Segmentacao_de_clientes-cartao_de_credito" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-cartao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Segmentação de Clientes de Cartão de Crédito</h4>
+                <p class="card-summary">Agrupa clientes pelo uso do cartão para direcionar campanhas de marketing e identificar perfis de maior risco.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>K-Means</li><li>PCA</li><li>Seaborn</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Campanhas iguais para todos os clientes desperdiçam verba e não conversam com cada perfil.</dd>
+                    <dt>Solução</dt><dd>Clusterização com K-Means e redução de dimensionalidade com PCA para visualizar e interpretar os grupos.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Perfil "VIP": compra muito e paga em dia</li><li>Perfil de saque no crédito: mais receita e mais risco</li><li>Ações sugeridas para cada grupo</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Segmentacao_de_clientes-cartao_de_credito" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Segmentação de Clientes de Cartão de Crédito (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-								<!-- Contato -->
-								<section>
-									<header class="major">
-										<h2>Entre Contato</h2>
-									</header>
-									<p>Sinta-se à vontade para entrar em contato.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">ribeiro.mrt@gmail.com</a></li>
-										<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/rafael-ribeirosilva/">linkedin</a></li>
-									</ul>
-								</section>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Analise_de_clusters_para_segmentar_os_clientes" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-clusters.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Público-Alvo para Lançamento de Produto</h4>
+                <p class="card-summary">Clusters de clientes por perfil e comportamento de compra para indicar quem tem mais chance de comprar um novo produto.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>K-Means</li><li>Método do Cotovelo</li><li>Pandas</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>A empresa ia lançar um produto e não sabia em qual segmento concentrar o marketing.</dd>
+                    <dt>Solução</dt><dd>EDA de renda, idade, filhos e gastos; clusterização com K-Means e número de grupos definido pelo método do cotovelo.</dd>
+                    <dt>Destaques</dt><dd><ul><li>4 perfis com descrição de negócio</li><li>Grupo de alta renda e ticket alto priorizado</li><li>Alerta de churn no grupo menos ativo</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Analise_de_clusters_para_segmentar_os_clientes" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Público-Alvo para Lançamento de Produto (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-						</div>
-					</div>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Sistema_de_Recomendacao-Livros" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-livros.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Sistema de Recomendação de Livros</h4>
+                <p class="card-summary">Sugere livros parecidos com o histórico de leitura de cada usuário usando vizinhos mais próximos (KNN).</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Scikit-learn</li><li>NearestNeighbors</li><li>Pandas</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Com um catálogo enorme, o leitor não encontra o próximo livro, e a loja perde vendas.</dd>
+                    <dt>Solução</dt><dd>Filtragem por popularidade e avaliações, matriz usuário × livro e modelo NearestNeighbors por distância.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Recomendações personalizadas por usuário</li><li>Tratamento de livros com poucas avaliações</li><li>Modelo não supervisionado baseado em distância</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Sistema_de_Recomendacao-Livros" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Sistema de Recomendação de Livros (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-			</div>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Analise_do_Comportamento_da_Carteira_de_Acoes-Financas_parte_1" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-carteira.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados · Finanças</span>
+                <h4>Retorno de uma Carteira de Ações (Parte 1)</h4>
+                <p class="card-summary">Coleta automática de cotações de 2015 a 2022 e cálculo dos retornos simples, logarítmico e da carteira frente ao Ibovespa.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>yFinance</li><li>Pandas</li><li>Matplotlib</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>O investidor não consegue enxergar como a carteira se comportou ao longo dos anos nem compará-la ao mercado.</dd>
+                    <dt>Solução</dt><dd>Extração de preços via API (yFinance) de 5 ações e BOVA11, normalização e cálculo de retornos.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Comparação direta com o Ibovespa</li><li>Retornos anualizados por ativo</li><li>Base para a análise de risco (Parte 2)</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Analise_do_Comportamento_da_Carteira_de_Acoes-Financas_parte_1" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Retorno de uma Carteira de Ações (Parte 1) (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Calculo_do_risco_das_acoes-Financas_parte_2" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-risco.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados · Finanças</span>
+                <h4>Risco de uma Carteira de Ações (Parte 2)</h4>
+                <p class="card-summary">Mede o risco de cada ação com variância, desvio padrão e coeficiente de variação, e a relação entre elas por covariância e correlação.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Estatística</li><li>Pandas</li><li>Seaborn</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Olhar só o retorno esconde o risco: duas ações com o mesmo ganho podem ter volatilidades muito diferentes.</dd>
+                    <dt>Solução</dt><dd>Cálculo do risco médio anual por ativo e matrizes de covariância e correlação para avaliar a diversificação.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Risco × retorno por ação</li><li>Correlação entre os ativos da carteira</li><li>Continuação da Parte 1</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Calculo_do_risco_das_acoes-Financas_parte_2" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Risco de uma Carteira de Ações (Parte 2) (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
-	</body>
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Analise_dos_resultados_da_eleicao-2020" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-eleicao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados</span>
+                <h4>Análise Exploratória das Eleições 2020</h4>
+                <p class="card-summary">EDA dos dados abertos do TSE do 1º turno de 2020 para identificar padrões de candidatos, partidos e eleitorado.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Pandas</li><li>Seaborn</li><li>Dados Abertos TSE</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Quais fatores influenciam o resultado das eleições e como os votos se distribuem entre partidos e municípios?</dd>
+                    <dt>Solução</dt><dd>Limpeza e cruzamento das bases do TSE, estatística descritiva e visualizações por estado, capital e partido.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Dados públicos reais do TSE</li><li>Estatística descritiva e visualizações</li><li>Insights para partidos, campanhas e imprensa</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Analise_dos_resultados_da_eleicao-2020" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Análise Exploratória das Eleições 2020 (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Análise de Dados (Power BI) -->
+        <div class="group" data-group="bi" data-more="Ver todos os dashboards Power BI ({n})">
+          <h3 class="group-title"><span class="dot dot-bi" aria-hidden="true"></span>Análise de Dados · Power BI</h3>
+          <div class="grid grid-compact">
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiMTRlNTI5ZWYtNjYwOC00ZWZlLTgyNTMtYjU1NDkzMzA0NDMyIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-vendas.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI</span>
+                <h4>Dashboard de Vendas</h4>
+                <p class="card-summary">Faturamento total, produtos mais vendidos e desempenho da loja ao longo do período.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiMTRlNTI5ZWYtNjYwOC00ZWZlLTgyNTMtYjU1NDkzMzA0NDMyIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Dashboard de Vendas (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiNjBkZTFjZjQtNjI3NC00NGY1LWEyMjctYTBiYTA5ZTk2NTU4IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-comercial.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI</span>
+                <h4>Painel Comercial</h4>
+                <p class="card-summary">Total de vendas, ticket médio, clientes atendidos e faturamento por marca.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiNjBkZTFjZjQtNjI3NC00NGY1LWEyMjctYTBiYTA5ZTk2NTU4IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Painel Comercial (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiZDIwZjAzNjQtNmQ2Zi00MjU0LTljNjUtMjJmYWNkMzIzMjA1IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-vendas-meta.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI · SQL</span>
+                <h4>Vendas × Meta</h4>
+                <p class="card-summary">Views em SQL como tabelas dimensão, conectadas ao Power BI para comparar vendas online com a meta.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiZDIwZjAzNjQtNmQ2Zi00MjU0LTljNjUtMjJmYWNkMzIzMjA1IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Vendas × Meta (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiNjk1ZDk5YzctY2RiZi00Y2U3LWI2ZGUtNzc5YTJlNDAxMTQ0IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-dre.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI · Finanças</span>
+                <h4>DRE Gerencial</h4>
+                <p class="card-summary">Demonstrativo de resultados customizado: receitas, custos e despesas resumidos para o gestor.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiNjk1ZDk5YzctY2RiZi00Y2U3LWI2ZGUtNzc5YTJlNDAxMTQ0IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: DRE Gerencial (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiYjJlN2UzZjMtN2NkMS00ZmIwLTk3NzYtNjQ3OWVhNDc1NmI2IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-dre-simulador.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI · Finanças</span>
+                <h4>DRE com Simulador de Cenários</h4>
+                <p class="card-summary">DRE construído a partir de um PDF, com simulador para projetar cenários futuros sobre o resultado realizado.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiYjJlN2UzZjMtN2NkMS00ZmIwLTk3NzYtNjQ3OWVhNDc1NmI2IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: DRE com Simulador de Cenários (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiY2Q4NjA4YWMtMTBjOS00NzRjLWIyNGMtODI5OTUzNjMzOTRhIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-oee.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI · SQL Server</span>
+                <h4>Produção com Cálculo de OEE</h4>
+                <p class="card-summary">Eficiência global dos equipamentos (OEE) calculada a partir de uma base SQL Server para a gestão da fábrica.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiY2Q4NjA4YWMtMTBjOS00NzRjLWIyNGMtODI5OTUzNjMzOTRhIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Produção com Cálculo de OEE (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiYmFkM2I0ZDItMWRiMi00N2ZjLWJkZWUtNjNkNjJjNGQ5Njg3IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-producao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI</span>
+                <h4>Histórico de Produção</h4>
+                <p class="card-summary">Quantidade produzida ao longo do tempo para acompanhar o desempenho produtivo da empresa.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiYmFkM2I0ZDItMWRiMi00N2ZjLWJkZWUtNjNkNjJjNGQ5Njg3IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Histórico de Produção (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiNjNkZDYwOGMtYmY3Ny00NjAyLTgwNWMtNTIwNzRlYzRlYzU4IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-estoque.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI</span>
+                <h4>Controle de Estoque</h4>
+                <p class="card-summary">Fluxo de entradas e saídas e comportamento do estoque por produto.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiNjNkZDYwOGMtYmY3Ny00NjAyLTgwNWMtNTIwNzRlYzRlYzU4IiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Controle de Estoque (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiN2NhODIwMDgtYjBmZS00OTVhLThlM2MtOTRlODUxOTNjMmYxIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-logistica.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI</span>
+                <h4>Painel Logístico</h4>
+                <p class="card-summary">Quantidade de viagens realizadas e indicadores para monitorar a operação logística.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiN2NhODIwMDgtYjBmZS00OTVhLThlM2MtOTRlODUxOTNjMmYxIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Painel Logístico (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiOTExNDM5ZmMtNTZlNi00YzNhLWIzN2YtOTE3OTM5MWNhNTAyIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-rh.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI</span>
+                <h4>People Analytics (RH)</h4>
+                <p class="card-summary">Visão completa do quadro de funcionários para apoiar decisões do RH.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiOTExNDM5ZmMtNTZlNi00YzNhLWIzN2YtOTE3OTM5MWNhNTAyIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: People Analytics (RH) (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://app.powerbi.com/view?r=eyJrIjoiZDE2ZTNjNzgtNDlhNS00ZTM1LWEwMTktOGEyMjM5NDViNjczIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/pb-projetos.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-bi">Power BI</span>
+                <h4>Gestão de Projetos de Consultoria</h4>
+                <p class="card-summary">Andamento, prazos e desempenho de cada projeto em execução numa consultoria.</p>
+                <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiZDE2ZTNjNzgtNDlhNS00ZTM1LWEwMTktOGEyMjM5NDViNjczIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Gestão de Projetos de Consultoria (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Inteligência Artificial -->
+        <div class="group" data-group="ia">
+          <h3 class="group-title"><span class="dot dot-ia" aria-hidden="true"></span>Inteligência Artificial</h3>
+          <div class="grid">
+            <article class="card card-soon">
+              <div class="soon-body">
+                <span class="tag tag-ia">Em construção</span>
+                <h4>Agentes de IA, RAG e LLMs</h4>
+                <p>Estou publicando projetos de IA Generativa como os que desenvolvo no trabalho: agentes que leem documentos extensos, geram resumos e respondem perguntas com rastreabilidade.</p>
+                <ul class="chips" aria-label="Tecnologias">
+                  <li>LangChain</li><li>LangGraph</li><li>CrewAI</li><li>LlamaIndex</li><li>RAG</li><li>OpenAI API</li>
+                </ul>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/RafaelSilva89?tab=repositories" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Acompanhar no GitHub
+                <span class="sr-only"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experiência -->
+    <section class="section section-alt" id="experiencia" aria-labelledby="experiencia-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Trajetória</p>
+          <h2 id="experiencia-titulo">Experiência</h2>
+          <p class="section-sub">Da engenharia de processos na indústria à liderança de projetos de Inteligência Artificial no setor público.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-head">
+              <h3>Chefe de Divisão · Cientista de Dados</h3>
+              <span class="tl-date">nov/2023 – jul/2026</span>
+            </div>
+            <p class="tl-org">DETRAN-SP · Departamento Estadual de Trânsito de São Paulo</p>
+            <p class="tl-path">Diretor Técnico I → Coordenador de Inteligência Artificial → Chefe de Divisão</p>
+            <ul>
+              <li>Liderei projetos de Ciência de Dados e IA para modernizar serviços públicos e apoiar decisões com dados.</li>
+              <li>Desenvolvi soluções de IA Generativa com LLMs, RAG, agentes, chatbots e assistentes virtuais.</li>
+              <li>Treinei e implantei modelos de Machine Learning para classificação, predição e detecção de padrões.</li>
+              <li>Coordenei tecnicamente iniciativas com LangChain, LangGraph e CrewAI e defini arquiteturas de IA e hiperautomação.</li>
+            </ul>
+          </li>
+          <li class="tl-item">
+            <div class="tl-head">
+              <h3>Cientista de Dados · Aprendiz</h3>
+              <span class="tl-date">jun/2021 – nov/2023</span>
+            </div>
+            <p class="tl-org">Comunidade DS · programa de formação prática em projetos</p>
+            <p class="tl-path">Em paralelo ao trabalho na Dyna até jun/2022</p>
+            <ul>
+              <li>Projetos completos de Machine Learning: previsão de vendas e preços, churn, fraude, segmentação, NLP e recomendação.</li>
+              <li>Dashboards e relatórios gerenciais em Power BI para acompanhamento de indicadores.</li>
+            </ul>
+          </li>
+          <li class="tl-item">
+            <div class="tl-head">
+              <h3>Técnico de Métodos e Processos</h3>
+              <span class="tl-date">set/2020 – jun/2022</span>
+            </div>
+            <p class="tl-org">Dyna Indústria e Comércio</p>
+            <ul>
+              <li>Automação de rotinas com VBA, reduzindo trabalho manual e erros em processos repetitivos.</li>
+            </ul>
+          </li>
+          <li class="tl-item">
+            <div class="tl-head">
+              <h3>Técnico de Métodos e Processos</h3>
+              <span class="tl-date">jun/2011 – dez/2018</span>
+            </div>
+            <p class="tl-org">Mecaplast do Brasil (atual Novares)</p>
+            <ul>
+              <li>Melhoria contínua com Lean Manufacturing, ferramentas da qualidade, Six Sigma e SAP.</li>
+              <li>Experiência internacional: implantação de KPIs na unidade da Novares no México.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Competências -->
+    <section class="section" id="competencias" aria-labelledby="competencias-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Stack</p>
+          <h2 id="competencias-titulo">Competências</h2>
+        </header>
+        <div class="skills">
+          <div class="skill">
+            <h3>IA Generativa e Agentes</h3>
+            <ul class="chips"><li>LLMs</li><li>RAG</li><li>LangChain</li><li>LangGraph</li><li>CrewAI</li><li>OpenAI API</li><li>Prompt Engineering</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Machine Learning</h3>
+            <ul class="chips"><li>Python</li><li>Scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>Feature Engineering</li><li>EDA</li><li>CRISP-DM</li></ul>
+          </div>
+          <div class="skill">
+            <h3>NLP</h3>
+            <ul class="chips"><li>spaCy</li><li>NLTK</li><li>Hugging Face Transformers</li><li>Análise de sentimento</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Dados e BI</h3>
+            <ul class="chips"><li>SQL</li><li>Pandas</li><li>Power BI</li><li>DAX</li><li>Matplotlib</li><li>Seaborn</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Nuvem e Plataformas</h3>
+            <ul class="chips"><li>AWS</li><li>ECS</li><li>S3</li><li>RDS</li><li>Databricks</li><li>Docker</li><li>Git</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Desenvolvimento com IA e Processos</h3>
+            <ul class="chips"><li>Claude Code</li><li>Cursor</li><li>Google Antigravity</li><li>Lean</li><li>Six Sigma (Green Belt)</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formação -->
+    <section class="section section-alt" id="formacao" aria-labelledby="formacao-titulo">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Educação</p>
+          <h2 id="formacao-titulo">Formação</h2>
+        </header>
+        <div class="edu">
+          <div class="edu-item">
+            <h3>Pós-graduação em AI Scientist</h3>
+            <p>FIAP · 2026 – 2027 <span class="edu-badge">Em andamento</span></p>
+          </div>
+          <div class="edu-item">
+            <h3>Pós-graduação em IA para Devs</h3>
+            <p>FIAP · 2025 – 2026</p>
+          </div>
+          <div class="edu-item">
+            <h3>Tecnologia em Produção de Plástico</h3>
+            <p>FATEC-SP · 2008 – 2013</p>
+          </div>
+        </div>
+        <h3 class="subhead">Cursos complementares</h3>
+        <ul class="courses">
+          <li><strong>AWS re/Start</strong> · Escola da Nuvem</li>
+          <li><strong>Ciência de Dados Impressionador</strong> · Hashtag Treinamentos (264 h)</li>
+          <li><strong>Power BI Impressionador</strong> · Hashtag Treinamentos (117 h)</li>
+          <li><strong>Green Belt (Six Sigma)</strong> · Setec (80 h)</li>
+          <li><strong>Estatística para Análise de Dados com Python</strong> · Udemy</li>
+          <li><strong>Gestão de Projetos</strong> · Fundação Vanzolini</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" id="contato" aria-labelledby="contato-titulo">
+      <div class="container">
+        <div class="cta-box">
+          <h2 id="contato-titulo">Vamos conversar?</h2>
+          <p>Procuro oportunidades como Cientista de Dados ou Engenheiro de IA. Se você tem um desafio com dados ou IA, me chame.</p>
+          <div class="hero-cta cta-center">
+            <a class="btn btn-primary" href="mailto:ribeiro.mrt@gmail.com">
+              <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-mail"/></svg>ribeiro.mrt@gmail.com
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/rafael-ribeirosilva/" target="_blank" rel="noopener">
+              <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-linkedin"/></svg>LinkedIn
+            <span class="sr-only"> (abre em nova aba)</span></a>
+            <a class="btn btn-ghost" href="https://github.com/RafaelSilva89" target="_blank" rel="noopener">
+              <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>GitHub
+            <span class="sr-only"> (abre em nova aba)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year">2026</span> Rafael Ribeiro da Silva · São Paulo – SP</p>
+      <ul class="footer-links">
+        <li><a href="mailto:ribeiro.mrt@gmail.com" aria-label="E-mail"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-mail"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/rafael-ribeirosilva/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-linkedin"/></svg><span class="sr-only"> (abre em nova aba)</span></a></li>
+        <li><a href="https://github.com/RafaelSilva89" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg><span class="sr-only"> (abre em nova aba)</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>

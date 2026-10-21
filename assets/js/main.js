@@ -1,262 +1,145 @@
-/*
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	var	$window = $(window),
-		$head = $('head'),
-		$body = $('body');
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ],
-			'xlarge-to-max':    '(min-width: 1681px)',
-			'small-to-xlarge':  '(min-width: 481px) and (max-width: 1680px)'
-		});
-
-	// Stops animations/transitions until the page has ...
-
-		// ... loaded.
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-preload');
-				}, 100);
-			});
-
-		// ... stopped resizing.
-			var resizeTimeout;
-
-			$window.on('resize', function() {
-
-				// Mark as resizing.
-					$body.addClass('is-resizing');
-
-				// Unmark after delay.
-					clearTimeout(resizeTimeout);
-
-					resizeTimeout = setTimeout(function() {
-						$body.removeClass('is-resizing');
-					}, 100);
-
-			});
-
-	// Fixes.
-
-		// Object fit images.
-			if (!browser.canUse('object-fit')
-			||	browser.name == 'safari')
-				$('.image.object').each(function() {
-
-					var $this = $(this),
-						$img = $this.children('img');
-
-					// Hide original image.
-						$img.css('opacity', '0');
-
-					// Set background.
-						$this
-							.css('background-image', 'url("' + $img.attr('src') + '")')
-							.css('background-size', $img.css('object-fit') ? $img.css('object-fit') : 'cover')
-							.css('background-position', $img.css('object-position') ? $img.css('object-position') : 'center');
-
-				});
-
-	// Sidebar.
-		var $sidebar = $('#sidebar'),
-			$sidebar_inner = $sidebar.children('.inner');
-
-		// Inactive by default on <= large.
-			breakpoints.on('<=large', function() {
-				$sidebar.addClass('inactive');
-			});
-
-			breakpoints.on('>large', function() {
-				$sidebar.removeClass('inactive');
-			});
-
-		// Hack: Workaround for Chrome/Android scrollbar position bug.
-			if (browser.os == 'android'
-			&&	browser.name == 'chrome')
-				$('<style>#sidebar .inner::-webkit-scrollbar { display: none; }</style>')
-					.appendTo($head);
-
-		// Toggle.
-			$('<a href="#sidebar" class="toggle">Toggle</a>')
-				.appendTo($sidebar)
-				.on('click', function(event) {
-
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
-
-					// Toggle.
-						$sidebar.toggleClass('inactive');
-
-				});
-
-		// Events.
-
-			// Link clicks.
-				$sidebar.on('click', 'a', function(event) {
-
-					// >large? Bail.
-						if (breakpoints.active('>large'))
-							return;
-
-					// Vars.
-						var $a = $(this),
-							href = $a.attr('href'),
-							target = $a.attr('target');
-
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
-
-					// Check URL.
-						if (!href || href == '#' || href == '')
-							return;
-
-					// Hide sidebar.
-						$sidebar.addClass('inactive');
-
-					// Redirect to href.
-						setTimeout(function() {
-
-							if (target == '_blank')
-								window.open(href);
-							else
-								window.location.href = href;
-
-						}, 500);
-
-				});
-
-			// Prevent certain events inside the panel from bubbling.
-				$sidebar.on('click touchend touchstart touchmove', function(event) {
-
-					// >large? Bail.
-						if (breakpoints.active('>large'))
-							return;
-
-					// Prevent propagation.
-						event.stopPropagation();
-
-				});
-
-			// Hide panel on body click/tap.
-				$body.on('click touchend', function(event) {
-
-					// >large? Bail.
-						if (breakpoints.active('>large'))
-							return;
-
-					// Deactivate.
-						$sidebar.addClass('inactive');
-
-				});
-
-		// Scroll lock.
-		// Note: If you do anything to change the height of the sidebar's content, be sure to
-		// trigger 'resize.sidebar-lock' on $window so stuff doesn't get out of sync.
-
-			$window.on('load.sidebar-lock', function() {
-
-				var sh, wh, st;
-
-				// Reset scroll position to 0 if it's 1.
-					if ($window.scrollTop() == 1)
-						$window.scrollTop(0);
-
-				$window
-					.on('scroll.sidebar-lock', function() {
-
-						var x, y;
-
-						// <=large? Bail.
-							if (breakpoints.active('<=large')) {
-
-								$sidebar_inner
-									.data('locked', 0)
-									.css('position', '')
-									.css('top', '');
-
-								return;
-
-							}
-
-						// Calculate positions.
-							x = Math.max(sh - wh, 0);
-							y = Math.max(0, $window.scrollTop() - x);
-
-						// Lock/unlock.
-							if ($sidebar_inner.data('locked') == 1) {
-
-								if (y <= 0)
-									$sidebar_inner
-										.data('locked', 0)
-										.css('position', '')
-										.css('top', '');
-								else
-									$sidebar_inner
-										.css('top', -1 * x);
-
-							}
-							else {
-
-								if (y > 0)
-									$sidebar_inner
-										.data('locked', 1)
-										.css('position', 'fixed')
-										.css('top', -1 * x);
-
-							}
-
-					})
-					.on('resize.sidebar-lock', function() {
-
-						// Calculate heights.
-							wh = $window.height();
-							sh = $sidebar_inner.outerHeight() + 30;
-
-						// Trigger scroll.
-							$window.trigger('scroll.sidebar-lock');
-
-					})
-					.trigger('resize.sidebar-lock');
-
-				});
-
-	// Menu.
-		var $menu = $('#menu'),
-			$menu_openers = $menu.children('ul').find('.opener');
-
-		// Openers.
-			$menu_openers.each(function() {
-
-				var $this = $(this);
-
-				$this.on('click', function(event) {
-
-					// Prevent default.
-						event.preventDefault();
-
-					// Toggle.
-						$menu_openers.not($this).removeClass('active');
-						$this.toggleClass('active');
-
-					// Trigger resize (sidebar lock).
-						$window.triggerHandler('resize.sidebar-lock');
-
-				});
-
-			});
-
-})(jQuery);
+(function () {
+  'use strict';
+
+  var root = document.documentElement;
+
+  // Tema claro/escuro -----------------------------------------------------
+  var themeBtn = document.getElementById('theme-toggle');
+  var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function currentTheme() {
+    return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light');
+  }
+
+  function updateThemeLabel() {
+    var next = currentTheme() === 'dark' ? 'claro' : 'escuro';
+    themeBtn.setAttribute('aria-label', 'Ativar tema ' + next);
+    themeBtn.setAttribute('title', 'Ativar tema ' + next);
+  }
+
+  themeBtn.addEventListener('click', function () {
+    var next = currentTheme() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    updateThemeLabel();
+  });
+  if (media.addEventListener) media.addEventListener('change', updateThemeLabel);
+  updateThemeLabel();
+
+  // Menu mobile -----------------------------------------------------------
+  var menuBtn = document.getElementById('menu-toggle');
+  var menu = document.getElementById('menu');
+
+  function setMenu(open) {
+    menu.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  }
+
+  menuBtn.addEventListener('click', function () {
+    setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+      setMenu(false);
+      menuBtn.focus();
+    }
+  });
+  document.addEventListener('click', function (e) {
+    if (menu.classList.contains('is-open') && !e.target.closest('.site-header')) setMenu(false);
+  });
+
+  // Filtros de projetos ---------------------------------------------------
+  var filters = document.querySelectorAll('.filter');
+  var groups = document.querySelectorAll('.group');
+
+  // Contadores dos filtros calculados a partir dos cards publicados
+  var total = 0;
+  groups.forEach(function (g) {
+    var n = g.querySelectorAll('.card:not(.card-soon)').length;
+    var count = document.querySelector('.filter[data-filter="' + g.getAttribute('data-group') + '"] .count');
+    total += n;
+    if (count && n) count.textContent = n;
+  });
+  var totalCount = document.querySelector('.filter[data-filter="all"] .count');
+  if (totalCount) totalCount.textContent = total;
+
+  // Grupos com muitos cards começam recolhidos, com botão "Ver todos"
+  // (com até 6 cards, só no celular; ver .group[data-few] no CSS)
+  groups.forEach(function (g) {
+    var cards = g.querySelectorAll('.card');
+    if (cards.length <= 3) return;
+    if (cards.length <= 6) g.setAttribute('data-few', '');
+    var wrap = document.createElement('div');
+    wrap.className = 'more-wrap';
+    var more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'btn btn-ghost';
+    more.textContent = (g.getAttribute('data-more') || 'Ver todos os {n} projetos').replace('{n}', cards.length);
+    more.addEventListener('click', function () {
+      // Leva o foco ao primeiro card revelado, para quem navega por teclado
+      var firstHidden = Array.prototype.find.call(cards, function (c) { return c.offsetParent === null; });
+      g.classList.remove('is-collapsed');
+      g.setAttribute('data-expanded', '');
+      if (firstHidden) firstHidden.querySelector('.card-cta').focus({ preventScroll: true });
+    });
+    wrap.appendChild(more);
+    g.appendChild(wrap);
+    g.classList.add('is-collapsed');
+  });
+
+  var filterStatus = document.getElementById('filter-status');
+
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var value = btn.getAttribute('data-filter');
+      var shown = 0;
+      filters.forEach(function (b) {
+        var active = b === btn;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+      groups.forEach(function (g) {
+        g.hidden = value !== 'all' && g.getAttribute('data-group') !== value;
+        // Ao escolher um tema específico, mostra todos os projetos dele;
+        // em "Todos", volta a recolher o que o visitante não expandiu
+        if (value !== 'all' && !g.hidden) g.classList.remove('is-collapsed');
+        else if (value === 'all' && g.querySelector('.more-wrap') && !g.hasAttribute('data-expanded')) g.classList.add('is-collapsed');
+        if (!g.hidden) shown += g.querySelectorAll('.card:not(.card-soon)').length;
+      });
+      if (filterStatus) {
+        var label = btn.querySelector('.lbl-full') || btn.firstChild;
+        filterStatus.textContent = value === 'all'
+          ? 'Mostrando todos os ' + shown + ' projetos'
+          : shown ? 'Mostrando ' + shown + ' projetos de ' + label.textContent.trim() : 'Projetos de ' + label.textContent.trim() + ' em construção';
+      }
+    });
+  });
+
+  // Link ativo no menu conforme a rolagem ---------------------------------
+  var navLinks = document.querySelectorAll('.nav a[href^="#"]');
+  if ('IntersectionObserver' in window) {
+    var byId = {};
+    navLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = byId[entry.target.id];
+        if (!link || !entry.isIntersecting) return;
+        navLinks.forEach(function (a) { a.classList.remove('is-current'); a.removeAttribute('aria-current'); });
+        link.classList.add('is-current');
+        link.setAttribute('aria-current', 'location');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(byId).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  }
+
+  // Ano no rodapé ---------------------------------------------------------
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+})();
