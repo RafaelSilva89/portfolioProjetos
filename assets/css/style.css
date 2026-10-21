@@ -640,30 +640,6 @@ dd li + li { margin-top: 2px; }
 .card-cta { margin-top: auto; }
 details + .card-cta { margin-top: 0; }
 
-/* Card "em construção" */
-.card-soon {
-  border-style: dashed;
-  border-width: 2px;
-  background:
-    linear-gradient(135deg, var(--c-ia-bg), transparent 60%),
-    var(--surface);
-}
-.card-soon:hover { transform: none; }
-.soon-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 24px;
-  height: 100%;
-}
-.soon-body h4 { font-size: 1.2rem; }
-.soon-body p { color: var(--text-muted); font-size: .95rem; }
-.soon-body .btn { margin-top: auto; }
-@media (min-width: 1040px) {
-  .group[data-group="ia"] .card-soon { grid-column: span 2; }
-}
-
 /* Timeline -------------------------------------------------------------- */
 .timeline {
   list-style: none;
@@ -732,7 +708,7 @@ details + .card-cta { margin-top: 0; }
   grid-template-columns: 1fr;
   gap: 16px;
 }
-@media (min-width: 760px) { .edu { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 760px) { .edu { grid-template-columns: repeat(3, 1fr); align-items: start; } }
 .edu-item {
   padding: 22px;
   background: var(--surface);
@@ -741,6 +717,8 @@ details + .card-cta { margin-top: 0; }
 }
 .edu-item h3 { font-size: 1.05rem; font-weight: 700; }
 .edu-item p { margin-top: 4px; color: var(--text-muted); font-size: .92rem; }
+.edu-item details { margin-top: 14px; }
+.edu-item dd a { font-weight: 600; white-space: nowrap; }
 .edu-badge {
   display: inline-block;
   margin-left: 6px;

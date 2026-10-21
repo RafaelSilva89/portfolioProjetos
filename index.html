@@ -14,7 +14,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Rafael Silva · Cientista de Dados e IA">
   <!-- Ao publicar novos projetos, atualize as contagens aqui e nos números do hero -->
-  <meta property="og:description" content="IA Generativa, Machine Learning e AWS: 17 projetos com código no GitHub e 11 dashboards Power BI.">
+  <meta property="og:description" content="IA Generativa, Machine Learning e AWS: 23 projetos com código no GitHub e 11 dashboards Power BI.">
   <meta property="og:url" content="https://rafaelsilva89.github.io/portfolioProjetos/">
   <meta property="og:image" content="https://rafaelsilva89.github.io/portfolioProjetos/images/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -112,7 +112,7 @@
         <ul class="stats" aria-label="Resumo">
           <li><strong>15+</strong><span>anos resolvendo problemas de negócio</span></li>
           <li><strong>5+</strong><span>anos em Dados e IA</span></li>
-          <li><strong>28</strong><span>projetos e dashboards publicados</span></li>
+          <li><strong>34</strong><span>projetos e dashboards publicados</span></li>
           <li><strong>2</strong><span>pós-graduações em IA (FIAP)</span></li>
         </ul>
       </div>
@@ -128,13 +128,91 @@
         </header>
 
         <div class="filters" role="group" aria-label="Filtrar projetos por tema">
-          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">28</span></button>
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">34</span></button>
+          <button type="button" class="filter" data-filter="ia" aria-pressed="false"><span class="lbl-full">Inteligência Artificial</span><span class="lbl-short" aria-hidden="true">IA</span> <span class="count">3</span></button>
           <button type="button" class="filter" data-filter="aws" aria-pressed="false">Nuvem AWS <span class="count">6</span></button>
-          <button type="button" class="filter" data-filter="ds" aria-pressed="false">Ciência de Dados <span class="count">11</span></button>
+          <button type="button" class="filter" data-filter="ds" aria-pressed="false">Ciência de Dados <span class="count">14</span></button>
           <button type="button" class="filter" data-filter="bi" aria-pressed="false">Análise de Dados <span class="count">11</span></button>
-          <button type="button" class="filter" data-filter="ia" aria-pressed="false"><span class="lbl-full">Inteligência Artificial</span><span class="lbl-short" aria-hidden="true">IA</span> <span class="count">em breve</span></button>
         </div>
         <p class="sr-only" id="filter-status" role="status"></p>
+
+        <!-- Inteligência Artificial -->
+        <div class="group" data-group="ia" data-more="Ver todos os projetos de Inteligência Artificial ({n})">
+          <h3 class="group-title"><span class="dot dot-ia" aria-hidden="true"></span>Inteligência Artificial</h3>
+          <div class="grid">
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/suporte_a_decisao_medica_LLaMA-3-fine-tuned" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ia-rag.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ia">IA Generativa · RAG</span>
+                <h4>Assistente Médico com RAG e LLaMA-3 Fine-tuned</h4>
+                <p class="card-summary">Consulta 1.000 prontuários e protocolos do hospital e responde em português, com um LLaMA-3 8B especializado em medicina.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>LLaMA-3</li><li>LoRA</li><li>LangChain</li><li>ChromaDB</li><li>HuggingFace</li><li>Flask</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Médicos perdem tempo procurando informações em prontuários e protocolos, e um LLM genérico não conhece o contexto do hospital.</dd>
+                    <dt>Solução</dt><dd>Fine-tuning do LLaMA-3 8B com LoRA (4-bit) no MedQuAD; RAG com ChromaDB decide quando buscar contexto nos prontuários; mBART traduz a resposta para português.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Modelo fine-tuned publicado no HuggingFace Hub</li><li>3 modos: prontuário, tratamento e chat</li><li>Auditoria de cada consulta em logs JSON</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/suporte_a_decisao_medica_LLaMA-3-fine-tuned" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Assistente Médico com RAG e LLaMA-3 Fine-tuned (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Sistema_de_classificacao_automatica_de_imagens_de_raio-X_toracico_ResNet50" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ia-raiox.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ia">Visão Computacional · Multimodal</span>
+                <h4>Classificação de Raio-X Torácico com ResNet50</h4>
+                <p class="card-summary">Chatbot multimodal que classifica raios-X em Covid-19, pneumonia viral, pneumonia bacteriana ou normal, por texto, voz, imagem e vídeo.</p>
+                <p class="metric"><strong>100%</strong> de recall em Covid-19 (ResNet50, 40 raios-X de teste)</p>
+                <ul class="chips" aria-label="Tecnologias"><li>TensorFlow</li><li>ResNet50</li><li>OpenCV</li><li>GPT-4o-mini</li><li>Whisper</li><li>ChromaDB</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Ler raios-X exige especialista, e a triagem de doenças pulmonares precisa ser rápida.</dd>
+                    <dt>Solução</dt><dd>Transfer learning com ResNet50 (entrada 256×256), checagem da imagem com GPT-4o Vision e RAG com ChromaDB para informações de saúde; voz com Whisper e TTS.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Covid-19 e casos normais com 100% de recall</li><li>Análise de vídeo quadro a quadro e captura de tela</li><li>Uso informativo, sem substituir o diagnóstico médico</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Sistema_de_classificacao_automatica_de_imagens_de_raio-X_toracico_ResNet50" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Classificação de Raio-X Torácico com ResNet50 (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/algoritmo_genetico_logistica" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ia-genetico.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ia">Algoritmos Genéticos · Otimização</span>
+                <h4>Rotas de Entrega de Medicamentos com Algoritmo Genético</h4>
+                <p class="card-summary">Planeja rotas de entrega de medicamentos respeitando janelas de tempo, capacidade da frota e autonomia de combustível.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>Flask</li><li>Algoritmo Genético</li><li>JavaScript</li><li>AJAX</li><li>OpenAI API</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Rotas montadas à mão atrasam entregas prioritárias e desperdiçam combustível e capacidade dos veículos.</dd>
+                    <dt>Solução</dt><dd>Algoritmo genético (fitness, crossover e mutação) que penaliza atrasos, demanda não atendida e falta de autonomia; painel Flask em MVC mostra a evolução das rotas.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Bloqueia a otimização se a frota não comporta a demanda</li><li>Prioriza estabelecimentos críticos</li><li>Relatório de análise gerado com IA</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/algoritmo_genetico_logistica" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Rotas de Entrega de Medicamentos com Algoritmo Genético (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
 
         <!-- Nuvem AWS -->
         <div class="group" data-group="aws" data-more="Ver todos os projetos de Nuvem AWS ({n})">
@@ -286,6 +364,77 @@
         <div class="group" data-group="ds" data-more="Ver todos os projetos de Ciência de Dados ({n})">
           <h3 class="group-title"><span class="dot dot-ds" aria-hidden="true"></span>Ciência de Dados</h3>
           <div class="grid">
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/tech-challenge-fase3-modelo-alfabetizacao" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-alfabetizacao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados · Políticas Públicas</span>
+                <h4>Risco de Não Alfabetização no Brasil</h4>
+                <p class="card-summary">Prevê, antes da prova, quais crianças correm risco de não se alfabetizar, para direcionar as vagas de reforço escolar.</p>
+                <p class="metric"><strong>1,74x</strong> mais crianças em risco alcançadas que um sorteio (100 vagas)</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>LightGBM</li><li>Scikit-learn</li><li>CRISP-DM</li><li>API IBGE</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Cerca de 40% das crianças não atingiram o corte de alfabetização em 2024, e a prova só acontece no fim do ano, quando já não dá para agir.</dd>
+                    <dt>Solução</dt><dd>LightGBM ajustado com Random Search sobre a camada Gold (INEP + IBGE), verificação de vazamento em três camadas e um segundo modelo por município.</dd>
+                    <dt>Destaques</dt><dd><ul><li>AUC-ROC de 0,861 no modelo por município</li><li>Recall de 62,3% em 10 mil crianças nunca vistas</li><li>Base de 1,85 milhão de alunos em 5.517 municípios</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/tech-challenge-fase3-modelo-alfabetizacao" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Risco de Não Alfabetização no Brasil (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Sistema_de_Predicao_de_AVC" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-avc.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Ciência de Dados · Saúde</span>
+                <h4>Predição de Risco de AVC</h4>
+                <p class="card-summary">Estima o risco de AVC a partir de dados clínicos e demográficos, com uma aplicação web para apoiar a triagem.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Python</li><li>XGBoost</li><li>Scikit-learn</li><li>Flask</li><li>CRISP-DM</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Identificar cedo os pacientes de maior risco ajuda a priorizar prevenção e atendimento, mas só 4,9% da base teve AVC.</dd>
+                    <dt>Solução</dt><dd>CRISP-DM com tratamento de nulos, balanceamento por oversampling e comparação de Random Forest, XGBoost e LightGBM; XGBoost final servido em Flask.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Glicose, idade e IMC como variáveis mais relevantes</li><li>Taxa de AVC sobe de 0,1% (até 30 anos) para 17,7% (70+)</li><li>Formulário web que devolve a probabilidade de AVC</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Sistema_de_Predicao_de_AVC" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Predição de Risco de AVC (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/tech-challenge-fase2-alfabetizacao" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/ds-pipeline.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-ds">Engenharia de Dados · GCP</span>
+                <h4>Pipeline de Dados da Alfabetização no GCP</h4>
+                <p class="card-summary">Pipeline batch + streaming em Arquitetura Medalhão que reúne dados do INEP e do IBGE numa camada Gold no BigQuery.</p>
+                <p class="metric"><strong>&lt; US$ 1</strong> por mês de custo estimado na nuvem</p>
+                <ul class="chips" aria-label="Tecnologias"><li>GCP</li><li>BigQuery</li><li>Pub/Sub</li><li>Cloud Storage</li><li>Spark</li><li>AWS Glue</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Um indicador nacional não orienta ação local: é preciso cruzar indicadores, metas, microdados de 3,9 milhões de alunos e a malha do IBGE.</dd>
+                    <dt>Solução</dt><dd>Ingestão batch e streaming (Pub/Sub), camadas Bronze → Silver → Gold em Spark com checagens de qualidade, lake em Parquet no GCS e external tables no BigQuery.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Qualidade de dados verificada entre as camadas</li><li>FinOps com lifecycle do bucket e free tier</li><li>Versão alternativa com AWS Glue</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/tech-challenge-fase2-alfabetizacao" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Pipeline de Dados da Alfabetização no GCP (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
             <article class="card">
               <a class="card-media" href="https://github.com/RafaelSilva89/Rossmann_Store_Sales_Prediction" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
@@ -708,26 +857,6 @@
           </div>
         </div>
 
-        <!-- Inteligência Artificial -->
-        <div class="group" data-group="ia">
-          <h3 class="group-title"><span class="dot dot-ia" aria-hidden="true"></span>Inteligência Artificial</h3>
-          <div class="grid">
-            <article class="card card-soon">
-              <div class="soon-body">
-                <span class="tag tag-ia">Em construção</span>
-                <h4>Agentes de IA, RAG e LLMs</h4>
-                <p>Estou publicando projetos de IA Generativa como os que desenvolvo no trabalho: agentes que leem documentos extensos, geram resumos e respondem perguntas com rastreabilidade.</p>
-                <ul class="chips" aria-label="Tecnologias">
-                  <li>LangChain</li><li>LangGraph</li><li>CrewAI</li><li>LlamaIndex</li><li>RAG</li><li>OpenAI API</li>
-                </ul>
-                <a class="btn btn-ghost btn-sm" href="https://github.com/RafaelSilva89?tab=repositories" target="_blank" rel="noopener">
-                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Acompanhar no GitHub
-                <span class="sr-only"> (abre em nova aba)</span></a>
-              </div>
-            </article>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -839,14 +968,37 @@
           <div class="edu-item">
             <h3>Pós-graduação em AI Scientist</h3>
             <p>FIAP · 2026 – 2027 <span class="edu-badge">Em andamento</span></p>
+            <details>
+              <summary>Ver detalhes</summary>
+              <dl>
+                <dt>Foco</dt><dd>Ciclo completo do cientista de dados (preparação, modelagem, deploy e monitoramento) com ML, deep learning e IA generativa, sempre ligado à estratégia de negócio.</dd>
+                <dt>Formato</dt><dd>5 fases com micro-certificação; em cada uma, um Tech Challenge em grupo que integra as disciplinas (90% da nota).</dd>
+                <dt>Tech Challenges</dt><dd><ul><li>Fase 2: pipeline batch + streaming com Arquitetura Medalhão no GCP. <a href="https://github.com/RafaelSilva89/tech-challenge-fase2-alfabetizacao" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li><li>Fase 3: modelo supervisionado que prevê o risco de não alfabetização. <a href="https://github.com/RafaelSilva89/tech-challenge-fase3-modelo-alfabetizacao" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li></ul></dd>
+              </dl>
+            </details>
           </div>
           <div class="edu-item">
             <h3>Pós-graduação em IA para Devs</h3>
             <p>FIAP · 2025 – 2026</p>
+            <details>
+              <summary>Ver detalhes</summary>
+              <dl>
+                <dt>Foco</dt><dd>Sistemas com IA para desenvolvedores: Machine Learning na nuvem (AWS e Azure), NLP, visão computacional, algoritmos genéticos, LLMs e IA generativa.</dd>
+                <dt>Formato</dt><dd>5 fases com micro-certificação; em cada uma, um Tech Challenge em grupo que integra as disciplinas (90% da nota).</dd>
+                <dt>Tech Challenges</dt><dd><ul><li>Fase 1: predição de risco de AVC com dados clínicos. <a href="https://github.com/RafaelSilva89/Sistema_de_Predicao_de_AVC" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li><li>Fase 2: rotas de entrega otimizadas com Algoritmo Genético. <a href="https://github.com/RafaelSilva89/algoritmo_genetico_logistica" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li><li>Fase 3: apoio à decisão médica com RAG e LLaMA-3 fine-tuned. <a href="https://github.com/RafaelSilva89/suporte_a_decisao_medica_LLaMA-3-fine-tuned" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li><li>Fase 4: classificação de raio-X torácico com ResNet50 e chatbot multimodal. <a href="https://github.com/RafaelSilva89/Sistema_de_classificacao_automatica_de_imagens_de_raio-X_toracico_ResNet50" target="_blank" rel="noopener">GitHub<span class="sr-only"> (abre em nova aba)</span></a></li></ul></dd>
+              </dl>
+            </details>
           </div>
           <div class="edu-item">
             <h3>Tecnologia em Produção de Plástico</h3>
             <p>FATEC-SP · 2008 – 2013</p>
+            <details>
+              <summary>Ver detalhes</summary>
+              <dl>
+                <dt>Foco</dt><dd>Gestão da Qualidade, Gestão da Manufatura e transformação de plásticos por injeção e extrusão, com controle da qualidade, otimização de processos e melhoria contínua.</dd>
+                <dt>Projeto</dt><dd>Desenvolvimento em grupo de um sistema de manufatura, aplicando planejamento, organização e processos produtivos na disciplina de Produção.</dd>
+              </dl>
+            </details>
           </div>
         </div>
         <h3 class="subhead">Cursos complementares</h3>
