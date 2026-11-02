@@ -15,8 +15,13 @@ Site estático (HTML, CSS e JavaScript puros, sem dependências) publicado pelo 
 
 ### Adicionar um projeto
 
-Copie um `<article class="card">` dentro do grupo desejado (`data-group="ia" | "aws" | "ds" | "bi"`),
+Copie um `<article class="card">` dentro do grupo desejado (`data-group="ia" | "aws" | "ds" | "bi" | "gd"`),
 troque a imagem, o texto e os links, e atualize o contador no botão de filtro correspondente.
+
+O grupo **Guias e Modelos** (`data-group="gd"`, com `data-kind="guia"`) reúne os guias do repositório
+[Guias-CRISP-DM-Ciencia-de-Dados](https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados): cada card é um tipo
+de problema, com dois botões (o guia explicado e a estrutura para começar um projeto). Os guias não entram na
+contagem de projetos do hero.
 
 ## Contato
 

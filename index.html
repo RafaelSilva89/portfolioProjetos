@@ -14,7 +14,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Rafael Silva · Cientista de Dados e IA">
   <!-- Ao publicar novos projetos, atualize as contagens aqui e nos números do hero -->
-  <meta property="og:description" content="IA Generativa, Machine Learning e AWS: 23 projetos com código no GitHub e 11 dashboards Power BI.">
+  <meta property="og:description" content="IA Generativa, Machine Learning e AWS: 25 projetos com código no GitHub e 11 dashboards Power BI.">
   <meta property="og:url" content="https://rafaelsilva89.github.io/portfolioProjetos/">
   <meta property="og:image" content="https://rafaelsilva89.github.io/portfolioProjetos/images/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -112,7 +112,7 @@
         <ul class="stats" aria-label="Resumo">
           <li><strong>15+</strong><span>anos resolvendo problemas de negócio</span></li>
           <li><strong>5+</strong><span>anos em Dados e IA</span></li>
-          <li><strong>34</strong><span>projetos e dashboards publicados</span></li>
+          <li><strong>36</strong><span>projetos e dashboards publicados</span></li>
           <li><strong>2</strong><span>pós-graduações em IA (FIAP)</span></li>
         </ul>
       </div>
@@ -128,11 +128,12 @@
         </header>
 
         <div class="filters" role="group" aria-label="Filtrar projetos por tema">
-          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">34</span></button>
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">42</span></button>
           <button type="button" class="filter" data-filter="ia" aria-pressed="false"><span class="lbl-full">Inteligência Artificial</span><span class="lbl-short" aria-hidden="true">IA</span> <span class="count">3</span></button>
-          <button type="button" class="filter" data-filter="aws" aria-pressed="false">Nuvem AWS <span class="count">6</span></button>
+          <button type="button" class="filter" data-filter="aws" aria-pressed="false">Nuvem AWS <span class="count">8</span></button>
           <button type="button" class="filter" data-filter="ds" aria-pressed="false">Ciência de Dados <span class="count">14</span></button>
           <button type="button" class="filter" data-filter="bi" aria-pressed="false">Análise de Dados <span class="count">11</span></button>
+          <button type="button" class="filter" data-filter="gd" aria-pressed="false"><span class="lbl-full">Guias e Modelos</span><span class="lbl-short" aria-hidden="true">Guias</span> <span class="count">6</span></button>
         </div>
         <p class="sr-only" id="filter-status" role="status"></p>
 
@@ -218,6 +219,52 @@
         <div class="group" data-group="aws" data-more="Ver todos os projetos de Nuvem AWS ({n})">
           <h3 class="group-title"><span class="dot dot-aws" aria-hidden="true"></span>Nuvem AWS</h3>
           <div class="grid">
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Amazon_Bedrock_RAG_Assistente_IA_Expert_Academy" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-bedrock-rag.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS · IA Generativa</span>
+                <h4>Assistente RAG com Amazon Bedrock</h4>
+                <p class="card-summary">Assistente que responde dúvidas sobre uma escola online usando só os PDFs dela, e mostra de onde tirou cada resposta.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Amazon Bedrock</li><li>Knowledge Bases</li><li>Nova Micro</li><li>Titan Embeddings</li><li>S3</li><li>IAM</li><li>Streamlit</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Um modelo de linguagem sozinho não conhece os planos, as trilhas e os termos de uso da escola, e pode inventar uma resposta convincente.</dd>
+                    <dt>Solução</dt><dd>PDFs no S3 indexados por uma Knowledge Base gerenciada (chunking e embeddings); a pergunta busca os trechos mais parecidos (<code>retrieve</code>) e o Nova Micro responde só com eles (<code>converse</code>), num chat em Streamlit.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Cada resposta traz as fontes, com arquivo, trecho e score</li><li>Notebook que explica embeddings, PCA e similaridade de cosseno</li><li>Credenciais fora do código e limpeza dos recursos para não gerar custo</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Amazon_Bedrock_RAG_Assistente_IA_Expert_Academy" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Assistente RAG com Amazon Bedrock (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Imersao_AWS_Dia_1_Servidor_Web_com_ALB_e_S3" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-alb-s3.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS</span>
+                <h4>Servidor Web Privado com ALB, SSM e S3</h4>
+                <p class="card-summary">Site num servidor sem IP público, acessado pela internet só através de um load balancer e administrado sem SSH.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>VPC</li><li>EC2</li><li>ALB</li><li>NAT Gateway</li><li>Systems Manager</li><li>IAM</li><li>S3</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Um servidor com IP público e porta SSH aberta fica exposto a ataques, e chaves gravadas no disco são um risco.</dd>
+                    <dt>Solução</dt><dd>VPC com sub-redes públicas e privadas em duas zonas; o ALB recebe o tráfego e repassa à EC2 na sub-rede privada; NAT Gateway para a saída, VPC Endpoint para o S3 e Session Manager no lugar do SSH.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Security Group do servidor só aceita o do load balancer</li><li>Role IAM com credenciais temporárias, sem chave no disco</li><li>Erro de permissão no S3 diagnosticado: rede (endpoint) × autorização (policy)</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Imersao_AWS_Dia_1_Servidor_Web_com_ALB_e_S3" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Servidor Web Privado com ALB, SSM e S3 (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
             <article class="card">
               <a class="card-media" href="https://github.com/RafaelSilva89/Preparatorio_Desafio_2_BIA_Alta_Disponibilidade_e_CICD" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
@@ -851,6 +898,183 @@
                 <a class="btn btn-primary btn-sm card-cta" href="https://app.powerbi.com/view?r=eyJrIjoiZDE2ZTNjNzgtNDlhNS00ZTM1LWEwMTktOGEyMjM5NDViNjczIiwidCI6IjQyODc5NmIzLWI5ZjQtNGUwNy1iZjg4LTIzMjg4MDA5YmFlZSJ9" target="_blank" rel="noopener">
                   <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chart"/></svg>Abrir dashboard<span class="sr-only">: Gestão de Projetos de Consultoria (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
                 </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Guias e Modelos (repositório Guias-CRISP-DM-Ciencia-de-Dados) -->
+        <div class="group" data-group="gd" data-kind="guia" data-more="Ver todos os guias ({n})">
+          <h3 class="group-title"><span class="dot dot-gd" aria-hidden="true"></span>Guias e Modelos</h3>
+          <p class="group-sub">O material que uso para padronizar e acelerar os projetos. Para cada tipo de problema há um par: um <strong>guia</strong>, que explica cada etapa do CRISP-DM em linguagem simples, com figuras, checklists e erros comuns, e uma <strong>estrutura</strong>, só com os títulos, para começar um projeto novo sem partir do zero.</p>
+          <div class="grid">
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Classificacao.ipynb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/gd-classificacao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-gd">Guia + Estrutura · Classificação</span>
+                <h4>Classificação</h4>
+                <p class="card-summary">Roteiro para prever uma categoria (vai sair? é fraude?): da limpeza ao limiar de decisão e ao monitoramento.</p>
+                <ul class="chips" aria-label="O que o guia cobre"><li>CRISP-DM</li><li>Matriz de confusão</li><li>ROC e PR</li><li>Limiar</li><li>Optuna</li><li>SHAP</li></ul>
+                <details>
+                  <summary>Ver o que tem</summary>
+                  <dl>
+                    <dt>Para que serve</dt><dd>Prever classes com dados desbalanceados sem cair na armadilha da acurácia.</dd>
+                    <dt>O que o guia explica</dt><dd><ul><li>Métricas (precisão, recall, F1, ROC, PR), curva de custo e calibração</li><li>Validação cruzada estratificada e ajuste fino (Grid, Random e Bayesiana)</li><li>Interpretabilidade com SHAP e plano de monitoramento (drift, PSI, teste A/B)</li></ul></dd>
+                    <dt>Usado em</dt><dd>Sentimento, Fraudes e Rotatividade</dd>
+                  </dl>
+                </details>
+                <div class="card-ctas">
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Classificacao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Guia<span class="sr-only">: guia de Classificação (abre em nova aba)</span>
+                  </a>
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Estrutura_Classificacao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Estrutura<span class="sr-only">: estrutura de Classificação (abre em nova aba)</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Regressao.ipynb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/gd-regressao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-gd">Guia + Estrutura · Regressão</span>
+                <h4>Regressão</h4>
+                <p class="card-summary">Roteiro para prever um número (vendas, aluguel, votos), incluindo séries temporais com backtest.</p>
+                <ul class="chips" aria-label="O que o guia cobre"><li>CRISP-DM</li><li>MAE e RMSE</li><li>MAPE</li><li>Walk-forward</li><li>Optuna</li><li>SHAP</li></ul>
+                <details>
+                  <summary>Ver o que tem</summary>
+                  <dl>
+                    <dt>Para que serve</dt><dd>Prever valores contínuos e medir o erro na unidade do negócio.</dd>
+                    <dt>O que o guia explica</dt><dd><ul><li>Métricas (MAE, RMSE, MAPE, R²) e faixa de erro por cenário</li><li>Separação temporal e backtest walk-forward (janela crescente e fixa)</li><li>Interpretabilidade com SHAP e monitoramento do erro em produção</li></ul></dd>
+                    <dt>Usado em</dt><dd>Eleição 2020, Aluguel e Rossmann</dd>
+                  </dl>
+                </details>
+                <div class="card-ctas">
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Regressao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Guia<span class="sr-only">: guia de Regressão (abre em nova aba)</span>
+                  </a>
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Estrutura_Regressao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Estrutura<span class="sr-only">: estrutura de Regressão (abre em nova aba)</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Clusterizacao.ipynb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/gd-clusterizacao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-gd">Guia + Estrutura · Clusterização</span>
+                <h4>Clusterização</h4>
+                <p class="card-summary">Roteiro para agrupar clientes sem rótulo e transformar cada grupo num perfil com uma ação de negócio.</p>
+                <ul class="chips" aria-label="O que o guia cobre"><li>CRISP-DM</li><li>K-Means</li><li>Silhouette</li><li>Cotovelo</li><li>ARI</li><li>Kruskal-Wallis</li></ul>
+                <details>
+                  <summary>Ver o que tem</summary>
+                  <dl>
+                    <dt>Para que serve</dt><dd>Encontrar segmentos que o negócio entende e consegue usar.</dd>
+                    <dt>O que o guia explica</dt><dd><ul><li>Escolha do número de grupos (cotovelo, silhouette) e estabilidade (ARI)</li><li>Testes estatísticos para descrever cada perfil</li><li>Explicação dos grupos com um classificador substituto e SHAP</li></ul></dd>
+                    <dt>Usado em</dt><dd>Segmentação de clientes e do cartão de crédito</dd>
+                  </dl>
+                </details>
+                <div class="card-ctas">
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Clusterizacao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Guia<span class="sr-only">: guia de Clusterização (abre em nova aba)</span>
+                  </a>
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Estrutura_Clusterizacao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Estrutura<span class="sr-only">: estrutura de Clusterização (abre em nova aba)</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Recomendacao.ipynb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/gd-recomendacao.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-gd">Guia + Estrutura · Recomendação</span>
+                <h4>Recomendação</h4>
+                <p class="card-summary">Roteiro para sugerir itens a cada usuário, avaliado escondendo parte do histórico.</p>
+                <ul class="chips" aria-label="O que o guia cobre"><li>CRISP-DM</li><li>Filtragem colaborativa</li><li>Acerto@N</li><li>NDCG</li><li>Cobertura</li><li>Cold start</li></ul>
+                <details>
+                  <summary>Ver o que tem</summary>
+                  <dl>
+                    <dt>Para que serve</dt><dd>Recomendar o que o usuário ainda não viu, sem repetir só o óbvio.</dd>
+                    <dt>O que o guia explica</dt><dd><ul><li>Métricas de lista (acerto@N, precisão, recall, NDCG) e cobertura</li><li>Separação por usuário para avaliar sem vazamento</li><li>Cold start, métricas online e ciclo de realimentação</li></ul></dd>
+                    <dt>Usado em</dt><dd>Sistema de Recomendação de Livros</dd>
+                  </dl>
+                </details>
+                <div class="card-ctas">
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Recomendacao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Guia<span class="sr-only">: guia de Recomendação (abre em nova aba)</span>
+                  </a>
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Estrutura_Recomendacao.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Estrutura<span class="sr-only">: estrutura de Recomendação (abre em nova aba)</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Sem_modelo.ipynb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/gd-sem-modelo.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-gd">Guia + Estrutura · Análise sem modelo</span>
+                <h4>Análise sem modelo</h4>
+                <p class="card-summary">Roteiro para análises que respondem à pergunta com estatística e indicadores, sem Machine Learning.</p>
+                <ul class="chips" aria-label="O que o guia cobre"><li>CRISP-DM</li><li>Estatística descritiva</li><li>Testes de hipótese</li><li>IQR</li><li>Janela móvel</li></ul>
+                <details>
+                  <summary>Ver o que tem</summary>
+                  <dl>
+                    <dt>Para que serve</dt><dd>Responder a perguntas de negócio quando um modelo não é necessário.</dd>
+                    <dt>O que o guia explica</dt><dd><ul><li>Estatística descritiva, histograma, boxplot e outliers pelo IQR</li><li>Qual teste estatístico usar e o tamanho do efeito</li><li>Acompanhamento dos indicadores com janela móvel e mudança de regime</li></ul></dd>
+                    <dt>Usado em</dt><dd>Carteira de Ações e Risco das Ações</dd>
+                  </dl>
+                </details>
+                <div class="card-ctas">
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Sem_modelo.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Guia<span class="sr-only">: guia de Análise sem modelo (abre em nova aba)</span>
+                  </a>
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Estrutura_Sem_modelo.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Estrutura<span class="sr-only">: estrutura de Análise sem modelo (abre em nova aba)</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Teste_AB.ipynb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/gd-teste-ab.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-gd">Guia + Estrutura · Teste A/B</span>
+                <h4>Teste A/B</h4>
+                <p class="card-summary">Roteiro para validar uma mudança com experimento: A/B, A/B/n, Bayesiano e Multi-Armed Bandit, e como escolher o ideal.</p>
+                <ul class="chips" aria-label="O que o guia cobre"><li>A/B</li><li>A/B/n</li><li>Bayesiano</li><li>MAB</li><li>Thompson Sampling</li></ul>
+                <details>
+                  <summary>Ver o que tem</summary>
+                  <dl>
+                    <dt>Para que serve</dt><dd>Provar que uma página, oferta ou campanha é melhor antes de implantar.</dd>
+                    <dt>O que o guia explica</dt><dd><ul><li>Design do experimento: hipóteses, α, poder, efeito mínimo e tamanho da amostra</li><li>Mapa de escolha do teste estatístico, com 10 exercícios resolvidos</li><li>Quando usar cada método e como levar o bandit para produção</li></ul></dd>
+                    <dt>Usado em</dt><dd>Segmentação de clientes (Teste A-B da campanha)</dd>
+                  </dl>
+                </details>
+                <div class="card-ctas">
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Guia_Teste_AB.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Guia<span class="sr-only">: guia de Teste A/B (abre em nova aba)</span>
+                  </a>
+                  <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Guias-CRISP-DM-Ciencia-de-Dados/blob/main/Estrutura_Teste_AB.ipynb" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Estrutura<span class="sr-only">: estrutura de Teste A/B (abre em nova aba)</span>
+                  </a>
+                </div>
               </div>
             </article>
 

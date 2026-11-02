@@ -97,6 +97,7 @@
     btn.addEventListener('click', function () {
       var value = btn.getAttribute('data-filter');
       var shown = 0;
+      var shownGuides = 0;
       filters.forEach(function (b) {
         var active = b === btn;
         b.classList.toggle('is-active', active);
@@ -108,12 +109,19 @@
         // em "Todos", volta a recolher o que o visitante não expandiu
         if (value !== 'all' && !g.hidden) g.classList.remove('is-collapsed');
         else if (value === 'all' && g.querySelector('.more-wrap') && !g.hasAttribute('data-expanded')) g.classList.add('is-collapsed');
-        if (!g.hidden) shown += g.querySelectorAll('.card:not(.card-soon)').length;
+        if (!g.hidden) {
+          // Guias (data-kind="guia") são contados à parte: não são projetos
+          var n = g.querySelectorAll('.card:not(.card-soon)').length;
+          if (g.getAttribute('data-kind') === 'guia') shownGuides += n;
+          else shown += n;
+        }
       });
       if (filterStatus) {
         var label = btn.querySelector('.lbl-full') || btn.firstChild;
+        var guidesText = shownGuides + (shownGuides === 1 ? ' guia' : ' guias');
         filterStatus.textContent = value === 'all'
-          ? 'Mostrando todos os ' + shown + ' projetos'
+          ? 'Mostrando todos os ' + shown + ' projetos e ' + guidesText
+          : shownGuides ? 'Mostrando ' + guidesText
           : shown ? 'Mostrando ' + shown + ' projetos de ' + label.textContent.trim() : 'Projetos de ' + label.textContent.trim() + ' em construção';
       }
     });
