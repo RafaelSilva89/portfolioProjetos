@@ -23,6 +23,7 @@
   --c-ds: #1d4ed8;  --c-ds-bg: #e0ecff;
   --c-bi: #854d0e;  --c-bi-bg: #fef6d8;
   --c-gd: #0f766e;  --c-gd-bg: #d5f5ef;
+  --c-db: #b42318;  --c-db-bg: #fde8e6;
 
   --radius: 14px;
   --radius-sm: 8px;
@@ -53,6 +54,7 @@
     --c-ds: #93c5fd;  --c-ds-bg: #172a4d;
     --c-bi: #fcd34d;  --c-bi-bg: #3a2f10;
     --c-gd: #5eead4;  --c-gd-bg: #0f3330;
+    --c-db: #fca5a5;  --c-db-bg: #3b1716;
     color-scheme: dark;
   }
 }
@@ -78,6 +80,7 @@
   --c-ds: #93c5fd;  --c-ds-bg: #172a4d;
   --c-bi: #fcd34d;  --c-bi-bg: #3a2f10;
   --c-gd: #5eead4;  --c-gd-bg: #0f3330;
+  --c-db: #fca5a5;  --c-db-bg: #3b1716;
   color-scheme: dark;
 }
 
@@ -496,6 +499,7 @@ html:not(.js) .filters { display: none; }
 .dot-ds { background: var(--c-ds); }
 .dot-bi { background: var(--c-bi); }
 .dot-gd { background: var(--c-gd); }
+.dot-db { background: var(--c-db); }
 .group-sub { max-width: 72ch; margin: -8px 0 20px; color: var(--text-muted); }
 
 .grid {
@@ -570,6 +574,7 @@ html:not(.js) .filters { display: none; }
 .tag-ds { color: var(--c-ds); background: var(--c-ds-bg); }
 .tag-bi { color: var(--c-bi); background: var(--c-bi-bg); }
 .tag-gd { color: var(--c-gd); background: var(--c-gd-bg); }
+.tag-db { color: var(--c-db); background: var(--c-db-bg); }
 /* Cards de guia: dois botões (guia e estrutura) lado a lado */
 .card-ctas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .card-ctas .card-cta { margin-top: 0; }

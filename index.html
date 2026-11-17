@@ -14,7 +14,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Rafael Silva · Cientista de Dados e IA">
   <!-- Ao publicar novos projetos, atualize as contagens aqui e nos números do hero -->
-  <meta property="og:description" content="IA Generativa, Machine Learning e AWS: 25 projetos com código no GitHub e 11 dashboards Power BI.">
+  <meta property="og:description" content="IA Generativa, Machine Learning, AWS e Databricks: 28 projetos com código no GitHub e 11 dashboards Power BI.">
   <meta property="og:url" content="https://rafaelsilva89.github.io/portfolioProjetos/">
   <meta property="og:image" content="https://rafaelsilva89.github.io/portfolioProjetos/images/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -112,7 +112,7 @@
         <ul class="stats" aria-label="Resumo">
           <li><strong>15+</strong><span>anos resolvendo problemas de negócio</span></li>
           <li><strong>5+</strong><span>anos em Dados e IA</span></li>
-          <li><strong>36</strong><span>projetos e dashboards publicados</span></li>
+          <li><strong>39</strong><span>projetos e dashboards publicados</span></li>
           <li><strong>2</strong><span>pós-graduações em IA (FIAP)</span></li>
         </ul>
       </div>
@@ -128,10 +128,11 @@
         </header>
 
         <div class="filters" role="group" aria-label="Filtrar projetos por tema">
-          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">42</span></button>
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">45</span></button>
           <button type="button" class="filter" data-filter="ia" aria-pressed="false"><span class="lbl-full">Inteligência Artificial</span><span class="lbl-short" aria-hidden="true">IA</span> <span class="count">3</span></button>
-          <button type="button" class="filter" data-filter="aws" aria-pressed="false">Nuvem AWS <span class="count">8</span></button>
+          <button type="button" class="filter" data-filter="aws" aria-pressed="false">Nuvem AWS <span class="count">10</span></button>
           <button type="button" class="filter" data-filter="ds" aria-pressed="false">Ciência de Dados <span class="count">14</span></button>
+          <button type="button" class="filter" data-filter="db" aria-pressed="false">Databricks <span class="count">1</span></button>
           <button type="button" class="filter" data-filter="bi" aria-pressed="false">Análise de Dados <span class="count">11</span></button>
           <button type="button" class="filter" data-filter="gd" aria-pressed="false"><span class="lbl-full">Guias e Modelos</span><span class="lbl-short" aria-hidden="true">Guias</span> <span class="count">6</span></button>
         </div>
@@ -219,6 +220,52 @@
         <div class="group" data-group="aws" data-more="Ver todos os projetos de Nuvem AWS ({n})">
           <h3 class="group-title"><span class="dot dot-aws" aria-hidden="true"></span>Nuvem AWS</h3>
           <div class="grid">
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Amazon_Bedrock_Agente_API_Gateway_IA_Expert_Academy" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-bedrock-api-gateway.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS · IA Generativa</span>
+                <h4>Agente de IA em Produção com API Gateway</h4>
+                <p class="card-summary">Leva o agente de atendimento para produção: uma URL pública que qualquer aplicação chama, com proteção e um chat em Streamlit.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>API Gateway</li><li>AWS Lambda</li><li>Bedrock AgentCore</li><li>Guardrails</li><li>IAM</li><li>CloudWatch</li><li>Streamlit</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>O agente só respondia a quem tinha credenciais da AWS e rodava um notebook; não dava para usá-lo num site ou app.</dd>
+                    <dt>Solução</dt><dd>HTTP API (<code>POST /chamada_agente_ia</code>) que aciona a Lambda <code>chamadaAgente</code>, que chama o agente com <code>invoke_harness</code> e devolve JSON; Guardrail e Policy Engine no Gateway; chat em Streamlit consumindo a URL.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Credenciais só na Lambda, com IAM de menor privilégio (só invoca o agente)</li><li>Contrato da API com status 200, 400, 500 e 503, testado no ReqBin e no notebook</li><li>Guardrail com resultado parcial documentado: recurso de conta pendente com a AWS</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Amazon_Bedrock_Agente_API_Gateway_IA_Expert_Academy" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Agente de IA em Produção com API Gateway (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Amazon_Bedrock_Agente_IA_Expert_Academy" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/aws-bedrock-agente.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-aws">Nuvem AWS · IA Generativa</span>
+                <h4>Agente de IA com Amazon Bedrock AgentCore</h4>
+                <p class="card-summary">Atendente de IA que raciocina sobre a pergunta e decide sozinho qual ferramenta usar: os documentos da escola, a data de hoje ou a tabela de preços.</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Bedrock AgentCore</li><li>Claude Haiku 4.5</li><li>MCP</li><li>AWS Lambda</li><li>Knowledge Bases</li><li>IAM</li><li>Boto3</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>O assistente RAG só sabia o que estava nos PDFs; perguntas como o preço de um curso dependem de um sistema, não de um documento.</dd>
+                    <dt>Solução</dt><dd>Agente no AgentCore com system prompt e memória; um Gateway (MCP) transforma a Knowledge Base do projeto RAG e duas Lambdas em ferramentas, e o modelo escolhe qual chamar.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Diagnóstico e troca do Nova Micro pelo Claude Haiku 4.5 para o agente conseguir usar ferramentas</li><li>Autenticação IAM no Gateway no lugar de JWT, que devolvia erro 401</li><li>Notebook que lê o stream e mostra o trace de cada decisão</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Amazon_Bedrock_Agente_IA_Expert_Academy" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Agente de IA com Amazon Bedrock AgentCore (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
 
             <article class="card">
               <a class="card-media" href="https://github.com/RafaelSilva89/Amazon_Bedrock_RAG_Assistente_IA_Expert_Academy" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
@@ -735,6 +782,38 @@
                 </details>
                 <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Analise_dos_resultados_da_eleicao-2020" target="_blank" rel="noopener">
                   <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Análise Exploratória das Eleições 2020 (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Databricks -->
+        <div class="group" data-group="db" data-more="Ver todos os projetos de Databricks ({n})">
+          <h3 class="group-title"><span class="dot dot-db" aria-hidden="true"></span>Databricks</h3>
+          <div class="grid">
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/Ciencia_de_Dados_na_Plataforma_Databricks" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/db-desloc.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-db">Databricks · Ciência de Dados</span>
+                <h4>Previsão do Preço de Corridas no Databricks</h4>
+                <p class="card-summary">Avalia se vale a pena re-treinar o algoritmo que calcula o preço das corridas de um app de transporte, do CSV à API, tudo dentro do Databricks.</p>
+                <p class="metric"><strong>29%</strong> menos erro que prever o preço médio (KNN erra R$ 1,93 por corrida)</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Databricks</li><li>Delta Lake</li><li>Unity Catalog</li><li>PySpark</li><li>Spark SQL</li><li>Scikit-learn</li><li>MLflow</li><li>Model Serving</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>O preço precisa ser calculado antes da corrida, e o time recebeu o ticket 3752-RETREINO: avaliar se o algoritmo atual deve ser re-treinado.</dd>
+                    <dt>Solução</dt><dd>CSV num Volume do Unity Catalog, tabela Delta, features em SQL e PySpark (distância haversine como UDF), pipeline scikit-learn com KNN, registro no MLflow e publicação como API no Model Serving.</dd>
+                    <dt>Destaques</dt><dd><ul><li>Correlação de 0,97 entre distância e preço</li><li>Uma regressão linear só com a distância erraria R$ 0,62, cerca de 1/3 do KNN: a recomendação para o re-treino</li><li>Variáveis conhecidas só depois da corrida (duração, odômetro) excluídas para evitar vazamento</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Ciencia_de_Dados_na_Plataforma_Databricks" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Previsão do Preço de Corridas no Databricks (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
                 </a>
               </div>
             </article>
