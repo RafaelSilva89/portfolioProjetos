@@ -1,6 +1,6 @@
 # Portfólio · Rafael Ribeiro da Silva
 
-Cientista de Dados · IA Generativa · Machine Learning · Power BI · AWS
+Cientista de Dados · IA Generativa · Machine Learning · Power BI · AWS · Azure
 
 **Acesse:** https://rafaelsilva89.github.io/portfolioProjetos/
 
@@ -15,7 +15,7 @@ Site estático (HTML, CSS e JavaScript puros, sem dependências) publicado pelo 
 
 ### Adicionar um projeto
 
-Copie um `<article class="card">` dentro do grupo desejado (`data-group="ia" | "aws" | "ds" | "db" | "bi" | "gd"`),
+Copie um `<article class="card">` dentro do grupo desejado (`data-group="ia" | "aws" | "az" | "ds" | "db" | "bi" | "gd"`),
 troque a imagem, o texto e os links, e atualize o contador no botão de filtro correspondente.
 
 O grupo **Guias e Modelos** (`data-group="gd"`, com `data-kind="guia"`) reúne os guias do repositório

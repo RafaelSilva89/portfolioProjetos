@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rafael Silva · Cientista de Dados e IA</title>
-  <meta name="description" content="Portfólio de Rafael Ribeiro da Silva, Cientista de Dados com experiência em IA Generativa, Machine Learning, Power BI e nuvem AWS. Projetos com código no GitHub.">
+  <meta name="description" content="Portfólio de Rafael Ribeiro da Silva, Cientista de Dados com experiência em IA Generativa, Machine Learning, Power BI e nuvens AWS e Azure. Projetos com código no GitHub.">
   <meta name="author" content="Rafael Ribeiro da Silva">
   <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Rafael Silva · Cientista de Dados e IA">
   <!-- Ao publicar novos projetos, atualize as contagens aqui e nos números do hero -->
-  <meta property="og:description" content="IA Generativa, Machine Learning, AWS e Databricks: 28 projetos com código no GitHub e 11 dashboards Power BI.">
+  <meta property="og:description" content="IA Generativa, Machine Learning, AWS, Azure e Databricks: 29 projetos com código no GitHub e 11 dashboards Power BI.">
   <meta property="og:url" content="https://rafaelsilva89.github.io/portfolioProjetos/">
   <meta property="og:image" content="https://rafaelsilva89.github.io/portfolioProjetos/images/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -112,7 +112,7 @@
         <ul class="stats" aria-label="Resumo">
           <li><strong>15+</strong><span>anos resolvendo problemas de negócio</span></li>
           <li><strong>5+</strong><span>anos em Dados e IA</span></li>
-          <li><strong>39</strong><span>projetos e dashboards publicados</span></li>
+          <li><strong>40</strong><span>projetos e dashboards publicados</span></li>
           <li><strong>2</strong><span>pós-graduações em IA (FIAP)</span></li>
         </ul>
       </div>
@@ -131,6 +131,7 @@
           <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todos <span class="count">45</span></button>
           <button type="button" class="filter" data-filter="ia" aria-pressed="false"><span class="lbl-full">Inteligência Artificial</span><span class="lbl-short" aria-hidden="true">IA</span> <span class="count">3</span></button>
           <button type="button" class="filter" data-filter="aws" aria-pressed="false">Nuvem AWS <span class="count">10</span></button>
+          <button type="button" class="filter" data-filter="az" aria-pressed="false">Nuvem Azure <span class="count">1</span></button>
           <button type="button" class="filter" data-filter="ds" aria-pressed="false">Ciência de Dados <span class="count">14</span></button>
           <button type="button" class="filter" data-filter="db" aria-pressed="false">Databricks <span class="count">1</span></button>
           <button type="button" class="filter" data-filter="bi" aria-pressed="false">Análise de Dados <span class="count">11</span></button>
@@ -447,6 +448,38 @@
                 </details>
                 <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/Desafio_1_Arquitetura_Local_e_em_AWS" target="_blank" rel="noopener">
                   <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Do Local à Nuvem: Docker, WSL 2 e EC2 (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Nuvem Azure -->
+        <div class="group" data-group="az" data-more="Ver todos os projetos de Nuvem Azure ({n})">
+          <h3 class="group-title"><span class="dot dot-az" aria-hidden="true"></span>Nuvem Azure</h3>
+          <div class="grid">
+
+            <article class="card">
+              <a class="card-media" href="https://github.com/RafaelSilva89/microsoft-azure-foundry-ai-agents" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="images/projects/az-foundry-agentes.webp" width="800" height="450" loading="lazy" alt="">
+              </a>
+              <div class="card-body">
+                <span class="tag tag-az">Nuvem Azure · IA Generativa</span>
+                <h4>Agentes de IA no Microsoft Foundry</h4>
+                <p class="card-summary">Oito agentes criados pelo código (Python + Foundry SDK) no Foundry Agent Service, cada um com uma capacidade nova e uma interface de chat em Streamlit.</p>
+                <p class="metric"><strong>8</strong> agentes, de um chat com memória a um agente que opera um navegador</p>
+                <ul class="chips" aria-label="Tecnologias"><li>Microsoft Foundry</li><li>Agent Service</li><li>Python</li><li>MCP</li><li>OpenAPI</li><li>Code Interpreter</li><li>Memory Store</li><li>Streamlit</li></ul>
+                <details>
+                  <summary>Ver estudo de caso</summary>
+                  <dl>
+                    <dt>Problema</dt><dd>Um modelo de linguagem sozinho só conversa: não busca dados atuais, não executa código, não chama outros sistemas e esquece o usuário.</dd>
+                    <dt>Solução</dt><dd>Um mesmo esqueleto (modelo + instruções + ferramentas), com login pelo Microsoft Entra ID e nenhuma chave no código; cada lab dá ao agente uma ferramenta nova.</dd>
+                    <dt>Labs</dt><dd><ul><li>Chat com memória de conversa</li><li>Pesquisa na web com citações</li><li>Code Interpreter: Python e gráficos a partir de um CSV</li><li>API REST de clima pela especificação OpenAPI</li><li>Servidor MCP do Microsoft Learn</li><li>Várias ferramentas combinadas numa pergunta</li><li>Automação de navegador com Playwright</li><li>Memória de longo prazo com o Memory Store</li></ul></dd>
+                  </dl>
+                </details>
+                <a class="btn btn-primary btn-sm card-cta" href="https://github.com/RafaelSilva89/microsoft-azure-foundry-ai-agents" target="_blank" rel="noopener">
+                  <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-github"/></svg>Ver no GitHub<span class="sr-only">: Agentes de IA no Microsoft Foundry (abre em nova aba)</span><svg aria-hidden="true" focusable="false" class="icon icon-sm"><use href="#i-arrow"/></svg>
                 </a>
               </div>
             </article>
